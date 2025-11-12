@@ -50,6 +50,9 @@ $g^{*}(3) = P(Y=1 \mid X=3) > P(Y=0 \mid X=3) = 0.8 > 0.2 = 1$ <br>
 :width: 80%
 :::
 ### e. Estimate the Bayes classifier error by simulation
+
+~0.26 
+
 ```{code-cell}
 :label: markdown-myst
 import numpy as np
