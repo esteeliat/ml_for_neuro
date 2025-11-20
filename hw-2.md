@@ -14,7 +14,8 @@ first, we notice that n1=|{i | X_i=1}|, n2=|{i | X_i=2}|, n3=|{i | X_i=3\}|
 
 so we do get n=n1+n2+n3, therefore - $$P(X_i=1)= θ$$, $$P(X_i=2)={2(1−θ)​ \over 3}$$, $$P(X_i=3)={(1−θ)​\over 3} $$.
 
-we then get that $$L(θ)=$$ $${θ^{n_1}}$$ * ($${2(1-θ) \over 3}){^{n_2}}$$ * ($${(1-θ) \over 3}){^{n_3}}$$ = $${2^{{n_2}} \over 3^{n_2+n_3}}$$ * $${θ^{n_1}}$$ * $${(1-θ)^{n_2+n_3}}$$
+we then get that 
+## final answers: $$L(θ)=$$ $${θ^{n_1}}$$ * ($${2(1-θ) \over 3}){^{n_2}}$$ * ($${(1-θ) \over 3}){^{n_3}}$$ = $${2^{{n_2}} \over 3^{n_2+n_3}}$$ * $${θ^{n_1}}$$ * $${(1-θ)^{n_2+n_3}}$$
 ## d.
 log likelihood function - $$l(θ)=log(L(θ))$$
 
@@ -28,7 +29,8 @@ because the first two termsare not depended on $$θ$$ and the derivative of log(
 now in order to find the maximum we will compare to zero the derivative:
 $${n_1} \over θ$$ = $${n_2+n_3} \over 1-θ$$ so $${n_1}(1-θ)=({n_2+n_3})θ$$
 
-=> $$n_1$$ = $$θ({n_1+n_2+n_3})$$ = $$θn$$ => $$\hatθ_{MLE}$$ = $$n_1 \over n$$
+=> $$n_1$$ = $$θ({n_1+n_2+n_3})$$ = $$θn$$ => 
+## final answers: $$\hatθ_{MLE}$$ = $$n_1 \over n$$
 ## e.
 Compute the bias: $$bias(\hatθ)$$ = $$E[\hatθ]-θ$$ = 
 
@@ -58,6 +60,7 @@ therefore $$Var(\hatθ)$$ = $${1 \over {n^2}}*nθ(1-θ)={θ(1-θ) \over n}$$
 Compute the Mean Squared Error (MSE):
 
 $$MSE(\hatθ)=Var(\hatθ)+{Bias(\hatθ)}^2={θ(1-θ) \over n}-0^2={θ(1-θ) \over n}$$
+## final answers: $$MSE(\hatθ)={θ(1-θ) \over n}$$
 ## Question 2:
 
 ## Question 3:
