@@ -1,0 +1,622 @@
+patient_id	ethnicity	previous_treatment	Survival_data	sex_birth	age_at_mri	symptoms	symptoms_other_text	treatment_plan	offset_imaging_date	offset_treatment_date	No_residual(Post-surgery)
+VS_MC_RC2_001	White - British			M	53.8	Hearing loss		Surgery	1991-04-28 00:00:00	1992-03-21 00:00:00	
+VS_MC_RC2_001	White - British			M	55.9	"Facial weakness, Hearing loss"		Surveillance	1993-06-01 00:00:00		
+VS_MC_RC2_001	White - British			M	56.8	"Hearing loss, Facial weakness"		Surveillance	1994-05-11 00:00:00		
+VS_MC_RC2_001	White - British			M	61.8	Hearing loss		Surveillance	1999-05-08 00:00:00		
+VS_MC_RC2_002	White - British			F	28.9	"Hearing loss, Tinnitus, Balance disturbance"		Surgery	1991-06-15 00:00:00	1991-08-24 00:00:00	
+VS_MC_RC2_002	White - British			F	34.7			Surveillance	1997-03-19 00:00:00		
+VS_MC_RC2_003	White - British			M	69.8		None	Surveillance	1994-04-25 00:00:00		
+VS_MC_RC2_004						"Hearing loss, Tinnitus"		Surveillance	1991-07-21 00:00:00		
+VS_MC_RC2_004						"Hearing loss, Tinnitus, Balance disturbance"		SRS	1992-07-24 00:00:00	1993-01-14 00:00:00	
+VS_MC_RC2_004							None	Surveillance	1994-03-06 00:00:00		
+VS_MC_RC2_005	White - British			M	72	Hearing loss		Surveillance	1990-08-01 00:00:00		
+VS_MC_RC2_005	White - British			M	77.4	Hearing loss		Surveillance	1995-11-25 00:00:00		
+VS_MC_RC2_005	White - British			M	80.5	Hearing loss		Surveillance	1999-01-16 00:00:00		
+VS_MC_RC2_006	Black or Black British - Caribbean			F	68.9	"Hearing loss, Balance disturbance"		SRS	1991-06-19 00:00:00	1992-05-16 00:00:00	
+VS_MC_RC2_007	White - British	SRS 1990		F	57.2	"Tinnitus, Balance disturbance"		Surveillance	1991-09-16 00:00:00		
+VS_MC_RC2_007	White - British	SRS 1990		F	59.2	Tinnitus		Surveillance	1993-10-09 00:00:00		
+VS_MC_RC2_007	White - British	SRS 1990		F	61.3	Tinnitus		Surveillance	1995-11-14 00:00:00		
+VS_MC_RC2_007	White - British	SRS 1990		F	64.3	Tinnitus		Surveillance	1998-11-15 00:00:00		
+VS_MC_RC2_009	White - British			M	71.7	Hearing loss		Surveillance	1991-04-03 00:00:00		
+VS_MC_RC2_009	White - British			M	74.7	Hearing loss		Surveillance	1994-04-16 00:00:00		
+VS_MC_RC2_009	White - British			M	76.2	Hearing loss		Surveillance	1995-09-16 00:00:00		
+VS_MC_RC2_009	White - British			M	77.3	Hearing loss		Surveillance	1996-11-16 00:00:00		
+VS_MC_RC2_009	White - British			M	79.6	Hearing loss		Surveillance	1999-02-19 00:00:00		
+VS_MC_RC2_010	Any Other Ethnic Group (Portugese)			F	57.8	Hearing loss		Surveillance	1990-04-25 00:00:00		
+VS_MC_RC2_010	Any Other Ethnic Group (Portugese)			F	60.4	"Hearing loss, Tinnitus"		Surveillance	1992-12-15 00:00:00		
+VS_MC_RC2_010	Any Other Ethnic Group (Portugese)			F	62.8	"Hearing loss, Tinnitus"		Surveillance	1995-05-20 00:00:00		
+VS_MC_RC2_010	Any Other Ethnic Group (Portugese)			F	63.8	"Hearing loss, Tinnitus, Dizziness, Balance disturbance"		Surveillance	1996-05-14 00:00:00		
+VS_MC_RC2_010	Any Other Ethnic Group (Portugese)			F	65.8	"Hearing loss, Tinnitus"		Surveillance	1998-05-02 00:00:00		
+VS_MC_RC2_011	White - English			M	48.5	Hearing loss		Surveillance	1991-01-05 00:00:00		
+VS_MC_RC2_011	White - English			M	49.4	Hearing loss		Surveillance	1991-12-14 00:00:00		
+VS_MC_RC2_012		SRS 1990	Passed away 1999			Hearing loss		Surveillance	1990-08-03 00:00:00		
+VS_MC_RC2_012		SRS 1990	Passed away 1999			"Hearing loss, Facial weakness"		Surveillance	1991-12-24 00:00:00		
+VS_MC_RC2_012		SRS 1990	Passed away 1999			"Hearing loss, Facial weakness"		Surveillance	1993-05-27 00:00:00		
+VS_MC_RC2_012		SRS 1990	Passed away 1999			"Hearing loss, Facial weakness"		Surveillance	1995-12-02 00:00:00		
+VS_MC_RC2_013	White - British			M	60	Hearing loss		Surveillance	1990-07-02 00:00:00		
+VS_MC_RC2_013	White - British			M	61.9	Hearing loss		Surveillance	1992-06-15 00:00:00		
+VS_MC_RC2_013	White - British			M	64	Hearing loss		Surveillance	1994-07-02 00:00:00		
+VS_MC_RC2_013	White - British			M	66	Hearing loss		Surveillance	1996-07-22 00:00:00		
+VS_MC_RC2_013	White - British			M	68.6	Hearing loss		Surveillance	1999-02-26 00:00:00		
+VS_MC_RC2_014	White - British			F	60.9	Hearing loss		SRS	1995-05-25 00:00:00	1994-12-06 00:00:00	
+VS_MC_RC2_015	White - British			F	62.9	"Hearing loss, Balance disturbance"		Surveillance	1991-06-22 00:00:00		
+VS_MC_RC2_015	White - British			F	63.6	"Hearing loss, Balance disturbance, Headache"		Surveillance	1992-02-09 00:00:00		
+VS_MC_RC2_016	White - British			M	72.9	"Hearing loss, Facial numbness"		Surveillance	1992-06-02 00:00:00		
+VS_MC_RC2_016	White - British			M	74	"Hearing loss, Facial numbness"		Surveillance	1993-07-28 00:00:00		
+VS_MC_RC2_016	White - British			M	77.6	"Hearing loss, Facial numbness"		Surveillance	1997-03-05 00:00:00		
+VS_MC_RC2_018	 Any Other Ethnic Group	SRS 1984		F	64.6	"Hearing loss, Tinnitus"		Surveillance	1989-02-28 00:00:00		
+VS_MC_RC2_019		SRS 1990				Hearing loss		Surveillance	1995-02-25 00:00:00		
+VS_MC_RC2_019		SRS 1990				Hearing loss		Surveillance	1997-02-14 00:00:00		
+VS_MC_RC2_019		SRS 1990				Hearing loss		Surveillance	1999-04-14 00:00:00		
+VS_MC_RC2_020	Asian or Asian British - Any other Asian background			F	43.3	"Hearing loss, Dizziness"		Surveillance	1989-10-30 00:00:00		
+VS_MC_RC2_020	Asian or Asian British - Any other Asian background			F	45.7	"Hearing loss, Dizziness"		Surveillance	1992-04-11 00:00:00		
+VS_MC_RC2_020	Asian or Asian British - Any other Asian background			F	47	"Hearing loss, Dizziness"		Surveillance	1993-08-01 00:00:00		
+VS_MC_RC2_020	Asian or Asian British - Any other Asian background			F	49	"Hearing loss, Dizziness, Tinnitus"		Surveillance	1995-07-26 00:00:00		
+VS_MC_RC2_020	Asian or Asian British - Any other Asian background			F	50.8	"Hearing loss, Tinnitus, Dizziness"		Surveillance	1997-05-03 00:00:00		
+VS_MC_RC2_020	Asian or Asian British - Any other Asian background			F	52.8	"Hearing loss, Tinnitus, Dizziness"		Surveillance	1999-05-15 00:00:00		
+VS_MC_RC2_021	Asian or Asian British - Indian			M	41.5	Hearing loss		Surgery	1991-01-04 00:00:00	1991-06-22 00:00:00	
+VS_MC_RC2_021	Asian or Asian British - Indian			M	42.4	Hearing loss		Surveillance	1991-12-27 00:00:00		No visible residual. Annotation not provided.
+VS_MC_RC2_021	Asian or Asian British - Indian			M	44.6	"Hearing loss, Facial weakness"		Surveillance	1994-02-13 00:00:00		No visible residual. Annotation not provided.
+VS_MC_RC2_021	Asian or Asian British - Indian			M	46.5	Hearing loss		Surveillance	1996-01-17 00:00:00		No visible residual. Annotation not provided.
+VS_MC_RC2_022	Any Other Ethnic Group			M	53.8	"Tinnitus, Hearing loss"		Surveillance	1991-05-15 00:00:00		
+VS_MC_RC2_022	Any Other Ethnic Group			M	58.4	"Hearing loss, Tinnitus"		Surveillance	1995-12-12 00:00:00		
+VS_MC_RC2_022	Any Other Ethnic Group			M	61.6	"Hearing loss, Tinnitus"		Surveillance	1999-02-18 00:00:00		
+VS_MC_RC2_022	Any Other Ethnic Group			M	63.9	"Hearing loss, Tinnitus"		SRS	2001-05-31 00:00:00		
+VS_MC_RC2_024	White - British			F	59.9	"Hearing loss, Tinnitus"		Surveillance	1991-06-10 00:00:00		
+VS_MC_RC2_024	White - British			F	61.5	"Hearing loss, Tinnitus"		Surveillance	1993-01-15 00:00:00		
+VS_MC_RC2_024	White - British			F	62.6	"Hearing loss, Tinnitus"		Surveillance	1994-03-01 00:00:00		
+VS_MC_RC2_024	White - British			F	65.8	"Hearing loss, Tinnitus"		Surveillance	1997-04-26 00:00:00		
+VS_MC_RC2_025						Hearing loss		Surveillance	1991-09-22 00:00:00		
+VS_MC_RC2_025						Hearing loss		Surveillance	1992-09-12 00:00:00		
+VS_MC_RC2_025						Hearing loss		Surveillance	1994-09-06 00:00:00		
+VS_MC_RC2_025						Hearing loss		Surveillance	1996-08-07 00:00:00		
+VS_MC_RC2_025						Hearing loss		Surveillance	1997-11-12 00:00:00		
+VS_MC_RC2_026						"Hearing loss, Facial weakness"		Surveillance	1992-02-14 00:00:00		
+VS_MC_RC2_026						"Hearing loss, Facial weakness"		Surveillance	1992-02-23 00:00:00		
+VS_MC_RC2_026						Hearing loss		Surveillance	1993-04-04 00:00:00		
+VS_MC_RC2_026						Hearing loss		Surveillance	1994-04-09 00:00:00		
+VS_MC_RC2_027	NR			M	35.5	"Hearing loss, Tinnitus"		Surveillance	1992-01-12 00:00:00		
+VS_MC_RC2_027	NR			M	36.1	"Hearing loss, Tinnitus"		Surveillance	1992-09-05 00:00:00		
+VS_MC_RC2_027	NR			M	38.1	"Hearing loss, Tinnitus"		Surveillance	1994-08-25 00:00:00		
+VS_MC_RC2_027	NR			M	43.4	"Hearing loss, Tinnitus"		Surveillance	1999-11-30 00:00:00		
+VS_MC_RC2_028	NR			M	55.2	Hearing loss		Surveillance	1991-09-22 00:00:00		
+VS_MC_RC2_028	NR			M	56.2	Hearing loss		Surveillance	1992-09-19 00:00:00		
+VS_MC_RC2_028	NR			M	57.9	Hearing loss		Surveillance	1994-05-28 00:00:00		
+VS_MC_RC2_028	NR			M	59.8	Hearing loss		Surveillance	1996-05-22 00:00:00		
+VS_MC_RC2_028	NR			M	62.1	Hearing loss		Surveillance	1998-09-05 00:00:00		
+VS_MC_RC2_029	NR			F	62.1	"Hearing loss, Tinnitus"		SRS	1991-08-10 00:00:00	1992-07-16 00:00:00	
+VS_MC_RC2_029	NR			F	63.9	"Hearing loss, Tinnitus"		Surveillance	1993-06-22 00:00:00		
+VS_MC_RC2_029	NR			F	64.9	"Hearing loss, Tinnitus"		Surveillance	1994-06-14 00:00:00		
+VS_MC_RC2_029	NR			F	66.2	"Hearing loss, Tinnitus"		Surveillance	1995-10-10 00:00:00		
+VS_MC_RC2_029	NR			F	68.2	"Hearing loss, Tinnitus"		Surveillance	1997-09-23 00:00:00		
+VS_MC_RC2_030	NR			M	63.5	"Hearing loss, Tinnitus"		Surveillance	1992-01-19 00:00:00	SRS 1993-08-29	
+VS_MC_RC2_030	NR			M	66.1	"Hearing loss, Tinnitus, Dizziness"		Surveillance	1994-08-20 00:00:00		
+VS_MC_RC2_031	White - British	SRS 1983		F	70.5	"Hearing loss, Balance disturbance"		Surveillance	1992-01-12 00:00:00		
+VS_MC_RC2_032	NR			F	39.2	Hearing loss		Surveillance	1991-10-12 00:00:00		
+VS_MC_RC2_033	White - British			M	49.2	"Hearing loss, Balance disturbance"		Surveillance	1991-10-08 00:00:00		
+VS_MC_RC2_033	White - British			M	50.2	"Hearing loss, Balance disturbance"		Surveillance	1992-10-05 00:00:00		
+VS_MC_RC2_033	White - British			M	51.6	"Hearing loss, Balance disturbance"		Surveillance	1994-03-01 00:00:00		
+VS_MC_RC2_033	White - British			M	52.6	"Hearing loss, Balance disturbance"		Surveillance	1995-02-26 00:00:00		
+VS_MC_RC2_033	White - British			M	54.6	"Hearing loss, Balance disturbance"		Surveillance	1997-03-04 00:00:00		
+VS_MC_RC2_033	White - British			M	57.6	"Hearing loss, Balance disturbance"		Surveillance	2000-02-26 00:00:00		
+VS_MC_RC2_034	White - British			F	46.6	"Hearing loss, Balance disturbance"		Surveillance	1993-02-07 00:00:00		
+VS_MC_RC2_034	White - British			F	47.6	"Hearing loss, Balance disturbance"		Surveillance	1994-03-11 00:00:00		
+VS_MC_RC2_034	White - British			F	48.6	"Hearing loss, Balance disturbance"		Surveillance	1995-02-28 00:00:00		
+VS_MC_RC2_035	White - British			M		Hearing loss		Surveillance	1993-02-13 00:00:00		
+VS_MC_RC2_037	NR					Hearing loss		Surveillance	1991-11-11 00:00:00		
+VS_MC_RC2_037	NR					Hearing loss		Surveillance	1993-02-14 00:00:00		
+VS_MC_RC2_037	NR					Hearing loss		Surveillance	1994-02-28 00:00:00		
+VS_MC_RC2_037	NR					Hearing loss		Surveillance	1995-02-25 00:00:00		
+VS_MC_RC2_037	NR					Hearing loss		Surveillance	2000-04-02 00:00:00		
+VS_MC_RC2_038	White - British			F	60.5	Hearing loss		SRS	1992-01-03 00:00:00	1992-05-16 00:00:00	
+VS_MC_RC2_038	White - British			F	65.6	Hearing loss		Surveillance	1997-03-05 00:00:00		
+VS_MC_RC2_038	White - British			F	67.8	Hearing loss		Surveillance	1999-04-28 00:00:00		
+VS_MC_RC2_040	White - British			M	61.4	Hearing loss		Surveillance	1991-12-11 00:00:00		
+VS_MC_RC2_040	White - British			M	62.6	Hearing loss		Surveillance	1993-02-14 00:00:00		
+VS_MC_RC2_040	White - British			M	64.6	Hearing loss		Surveillance	1995-02-17 00:00:00		
+VS_MC_RC2_040	White - British			M	65.7	Hearing loss		Surveillance	1996-04-10 00:00:00		
+VS_MC_RC2_041	White - British			F	61.4	Hearing loss		Surgery	1991-12-09 00:00:00	1992-06-25 00:00:00	
+VS_MC_RC2_045						"Hearing loss, Tinnitus"		Surveillance	1996-02-14 00:00:00		
+VS_MC_RC2_046	White - English			M	63.3	Hearing loss		Surveillance	1991-10-17 00:00:00		
+VS_MC_RC2_046	White - English			M	65.3	Hearing loss		Surveillance	1993-10-23 00:00:00		
+VS_MC_RC2_046	White - English			M	71.9	Hearing loss		Surveillance	2000-06-22 00:00:00		
+VS_MC_RC2_048	White - British			F	59.7	"Dizziness, Headache"		Surveillance	1992-04-13 00:00:00		
+VS_MC_RC2_048	White - British			F	60.8	"Dizziness, Headache"		Surveillance	1993-04-23 00:00:00		
+VS_MC_RC2_048	White - British			F	62.7	"Dizziness, Headache"		Surveillance	1995-04-17 00:00:00		
+VS_MC_RC2_049	White - Turkish Cypriot			F	72.5	"Hearing loss, Tinnitus"		Surveillance	1991-12-29 00:00:00		
+VS_MC_RC2_051						"Hearing loss, Balance disturbance"		SRS	1993-03-16 00:00:00	1993-09-05 00:00:00	
+VS_MC_RC2_052	White - British			M		"Hearing loss, Tinnitus"		SRS	1992-01-03 00:00:00	SRS 1992-06-15 and surgery 1995-03-04	
+VS_MC_RC2_052	White - British			M		"Hearing loss, Tinnitus"		Surveillance	1996-05-11 00:00:00		No visible residual. Annotation not provided.
+VS_MC_RC2_052	White - British			M		"Hearing loss, Tinnitus"		Surveillance	1998-06-11 00:00:00		No visible residual. Annotation not provided.
+VS_MC_RC2_053	White - British			F	65.6	Hearing loss		Surveillance	1992-02-28 00:00:00		
+VS_MC_RC2_053	White - British			F	66.6	Hearing loss		Surveillance	1993-02-15 00:00:00		
+VS_MC_RC2_053	White - British			F	67.6	Hearing loss		Surveillance	1994-03-04 00:00:00		
+VS_MC_RC2_053	White - British			F	68.8	Hearing loss		Surveillance	1995-04-22 00:00:00		
+VS_MC_RC2_053	White - British			F	70.7	Hearing loss		Surveillance	1997-04-04 00:00:00		
+VS_MC_RC2_054	White - British			F	31.5	"Hearing loss, Balance disturbance"		Surveillance	1992-01-06 00:00:00		
+VS_MC_RC2_054	White - British			F	34.2	"Hearing loss, Balance disturbance, Facial numbness"		SRS	1994-09-18 00:00:00	1995-01-28 00:00:00	
+VS_MC_RC2_054	White - British			F	35.6	"Hearing loss, Balance disturbance"		Surveillance	1996-02-16 00:00:00		
+VS_MC_RC2_054	White - British			F	36.4	"Hearing loss, Balance disturbance"		Surveillance	1996-12-11 00:00:00		
+VS_MC_RC2_054	White - British			F	39.5	Hearing loss		Surveillance	2000-01-02 00:00:00		
+VS_MC_RC2_055	NR			M	69.5	Hearing loss		Surveillance	1992-01-27 00:00:00		
+VS_MC_RC2_055	NR			M	71.6	Hearing loss		Surveillance	1994-02-27 00:00:00		
+VS_MC_RC2_055	NR			M	72.6	Hearing loss		Surveillance	1995-02-22 00:00:00		
+VS_MC_RC2_055	NR			M	73.6	Hearing loss		Surveillance	1996-02-28 00:00:00		
+VS_MC_RC2_055	NR			M	74.5	Hearing loss		Surveillance	1997-01-17 00:00:00		
+VS_MC_RC2_055	NR			M	75.6	Hearing loss		Surveillance	1998-03-10 00:00:00		
+VS_MC_RC2_055	NR			M	76.7	Hearing loss		Surveillance	1999-03-21 00:00:00		
+VS_MC_RC2_056	White - British			F	79.5	Hearing loss		Surveillance	1992-01-24 00:00:00		
+VS_MC_RC2_056	White - British			F	84.2	Hearing loss		Surveillance	1996-09-12 00:00:00		
+VS_MC_RC2_057	NR			F	63.5	Hearing loss		Surveillance	1992-01-04 00:00:00		
+VS_MC_RC2_060	White - British			F	66.7	Hearing loss		Surveillance	1993-04-04 00:00:00	SRS 1995-08-17	
+VS_MC_RC2_060	White - British			F	70.1	Hearing loss		Surveillance	1996-08-14 00:00:00		
+VS_MC_RC2_060	White - British			F	71.1	Hearing loss		Surveillance	1997-08-06 00:00:00		
+VS_MC_RC2_060	White - British			F	74.1	"Hearing loss, Balance disturbance"		Surveillance	2000-08-13 00:00:00		
+VS_MC_RC2_061	Asian or Asian British - Indian			F	55.8	"Hearing loss, Tinnitus"		Surveillance	1991-05-18 00:00:00		
+VS_MC_RC2_062	White - British			M	63.7	Hearing loss		Surveillance	1992-04-13 00:00:00		
+VS_MC_RC2_062	White - British			M	64.9	Hearing loss		Surveillance	1993-06-12 00:00:00		
+VS_MC_RC2_062	White - British			M	66.9	Hearing loss		SRS	1995-06-09 00:00:00	1996-01-27 00:00:00	
+VS_MC_RC2_062	White - British			M	69.5	Hearing loss		Surveillance	1998-01-16 00:00:00		
+VS_MC_RC2_063	White - British			M	59.7	"Hearing loss, Tinnitus"		Surgery	1991-04-07 00:00:00	1992-02-22 00:00:00	
+VS_MC_RC2_063	White - British			M	60.9	"Hearing loss, Tinnitus"		Surveillance	1992-06-12 00:00:00		
+VS_MC_RC2_063	White - British			M	61.9	"Hearing loss, Tinnitus"		Surveillance	1993-06-08 00:00:00		
+VS_MC_RC2_063	White - British			M	62.9	"Hearing loss, Tinnitus"		Surveillance	1994-05-24 00:00:00		
+VS_MC_RC2_063	White - British			M	63.8	"Hearing loss, Tinnitus"		Surveillance	1995-05-17 00:00:00		
+VS_MC_RC2_063	White - British			M	65.4	"Hearing loss, Tinnitus, Headache"		Surveillance	1996-12-01 00:00:00		
+VS_MC_RC2_063	White - British			M	67.9	"Hearing loss, Tinnitus"		Surveillance	1999-05-30 00:00:00		
+VS_MC_RC2_064	NR			F	64.5	"Hearing loss, Tinnitus"		Surveillance	1992-01-13 00:00:00		
+VS_MC_RC2_064	NR			F	65.2	"Hearing loss, Tinnitus"		Surveillance	1992-09-11 00:00:00		
+VS_MC_RC2_064	NR			F	66.5	"Hearing loss, Tinnitus"		Surveillance	1994-01-29 00:00:00		
+VS_MC_RC2_064	NR			F	67.6	"Hearing loss, Tinnitus"		Surveillance	1995-02-17 00:00:00		
+VS_MC_RC2_064	NR			F	68.6	"Hearing loss, Tinnitus"		SRS	1996-02-21 00:00:00	1996-07-16 00:00:00	
+VS_MC_RC2_064	NR			F	70	"Hearing loss, Tinnitus"		Surveillance	1997-07-29 00:00:00		
+VS_MC_RC2_064	NR			F	71	"Hearing loss, Tinnitus"		Surveillance	1998-07-25 00:00:00		
+VS_MC_RC2_064	NR			F	72	"Hearing loss, Tinnitus"		Surveillance	1999-07-28 00:00:00		
+VS_MC_RC2_065	NR			M	36.6	"Hearing loss, Tinnitus"		Surveillance	1992-02-04 00:00:00		
+VS_MC_RC2_065	NR			M	41	"Hearing loss, Tinnitus"		Surveillance	1996-07-03 00:00:00		
+VS_MC_RC2_065	NR			M	41.9	"Hearing loss, Tinnitus"		Surveillance	1997-06-16 00:00:00		
+VS_MC_RC2_065	NR			M	42	"Hearing loss, Tinnitus"		Surveillance	1997-07-24 00:00:00		
+VS_MC_RC2_065	NR			M	43.1	"Hearing loss, Tinnitus"		Surveillance	1998-08-15 00:00:00		
+VS_MC_RC2_065	NR			M	43.9	"Hearing loss, Tinnitus"		Surveillance	1999-06-14 00:00:00		
+VS_MC_RC2_066	White - British			M	23.7	"Hearing loss, Balance disturbance, Swallowing problems"		Surgery	1992-04-16 00:00:00	1992-08-08 00:00:00	
+VS_MC_RC2_066	White - British			M	24.4	"Hearing loss, Facial weakness"		Surveillance	1992-11-27 00:00:00		
+VS_MC_RC2_066	White - British			M	30	"Hearing loss, Facial weakness"		Surveillance	1998-07-24 00:00:00		
+VS_MC_RC2_067	NR			F	74.9	Other	Nil	Surveillance	1995-06-26 00:00:00		
+VS_MC_RC2_068	White - Any other White background			M	28.8	Tinnitus		Surveillance	1992-05-17 00:00:00		
+VS_MC_RC2_068	White - Any other White background			M	29.4	Tinnitus		Surveillance	1992-11-27 00:00:00		
+VS_MC_RC2_069	White - British	Surgery 1990		F	60.3	"Facial numbness, Hearing loss"		Surveillance	1991-11-11 00:00:00		
+VS_MC_RC2_069	White - British	Surgery 1990		F	62.6	Facial weakness		Surveillance	1994-02-28 00:00:00		
+VS_MC_RC2_070	NR			M		Hearing loss		Surveillance	1992-04-17 00:00:00		
+VS_MC_RC2_070	NR			M		Hearing loss		Surveillance	1993-03-16 00:00:00		
+VS_MC_RC2_070	NR			M		Hearing loss		Surveillance	1995-03-15 00:00:00		
+VS_MC_RC2_070	NR			M		Hearing loss		Surveillance	1996-03-06 00:00:00		
+VS_MC_RC2_070	NR			M		Hearing loss		SRS	1997-03-30 00:00:00	1997-12-20 00:00:00	
+VS_MC_RC2_071	Black or Black British - Any other Black background			F	53.6	"Hearing loss, Tinnitus"		Surveillance	1992-03-06 00:00:00		
+VS_MC_RC2_071	Black or Black British - Any other Black background			F	54.8	"Hearing loss, Tinnitus"		Surveillance	1993-05-14 00:00:00		
+VS_MC_RC2_071	Black or Black British - Any other Black background			F	55.7	"Hearing loss, Tinnitus"		Surveillance	1994-04-01 00:00:00		
+VS_MC_RC2_071	Black or Black British - Any other Black background			F	56.7	"Hearing loss, Tinnitus"		Surveillance	1995-03-24 00:00:00		
+VS_MC_RC2_071	Black or Black British - Any other Black background			F	59.6	"Hearing loss, Tinnitus"		Surveillance	1998-02-21 00:00:00		
+VS_MC_RC2_072	White - British			F	65.8	Balance disturbance		Surveillance	1991-05-10 00:00:00		
+VS_MC_RC2_072	White - British			F	66.8	"Balance disturbance, Tinnitus"		Surveillance	1992-05-02 00:00:00		
+VS_MC_RC2_072	White - British			F	67.8	"Tinnitus, Balance disturbance"		Surveillance	1993-04-23 00:00:00		
+VS_MC_RC2_072	White - British			F	69.4	"Tinnitus, Balance disturbance"		Surveillance	1994-11-26 00:00:00		
+VS_MC_RC2_072	White - British			F	71.2	"Tinnitus, Balance disturbance"			1996-09-10 00:00:00		
+VS_MC_RC2_073	White - British			M	58.9	"Tinnitus, Balance disturbance"		Surveillance	1992-05-28 00:00:00		
+VS_MC_RC2_074	White - British			M	58.5	"Hearing loss, Tinnitus"		Surveillance	1991-12-30 00:00:00		
+VS_MC_RC2_074	White - British			M	60	"Hearing loss, Tinnitus"		SRS	1993-07-19 00:00:00	1994-06-16 00:00:00	
+VS_MC_RC2_074	White - British			M	63.9	"Hearing loss, Tinnitus"		Surveillance	1997-06-28 00:00:00		
+VS_MC_RC2_075	NR			F	60.7	"Tinnitus, Balance disturbance"		Surveillance	1992-03-24 00:00:00		
+VS_MC_RC2_075	NR			F	61.9	"Tinnitus, Balance disturbance"		Surveillance	1993-06-08 00:00:00		
+VS_MC_RC2_075	NR			F	62.8	"Tinnitus, Balance disturbance"		Surveillance	1994-05-05 00:00:00		
+VS_MC_RC2_075	NR			F	63.8	"Tinnitus, Balance disturbance"		Surveillance	1995-05-11 00:00:00		
+VS_MC_RC2_075	NR			F	64.8	"Tinnitus, Balance disturbance"		Surveillance	1996-05-02 00:00:00		
+VS_MC_RC2_077	White - British			F	61	"Hearing loss, Balance disturbance"		Surveillance	1990-08-03 00:00:00		
+VS_MC_RC2_077	White - British			F	65.7	"Hearing loss, Balance disturbance"		Surveillance	1995-04-07 00:00:00		
+VS_MC_RC2_077	White - British			F	71.6	"Hearing loss, Balance disturbance"		Surveillance	2001-03-03 00:00:00		
+VS_MC_RC2_078						Hearing loss		Surveillance	1992-04-09 00:00:00		
+VS_MC_RC2_078						Hearing loss		Surveillance	1994-08-15 00:00:00		
+VS_MC_RC2_079	NR			F		Hearing loss		Surveillance	1992-06-06 00:00:00		
+VS_MC_RC2_079	NR			F		Hearing loss		Surveillance	1993-09-17 00:00:00		
+VS_MC_RC2_079	NR			F		Hearing loss		Surveillance	1994-11-06 00:00:00		
+VS_MC_RC2_081						Hearing loss		Surveillance	1992-04-20 00:00:00		
+VS_MC_RC2_081						Hearing loss		Surveillance	1993-04-26 00:00:00		
+VS_MC_RC2_081						Hearing loss		Surveillance	1994-06-16 00:00:00		
+VS_MC_RC2_081						Hearing loss		Surveillance	1994-07-27 00:00:00		
+VS_MC_RC2_081						Hearing loss		Surveillance	1995-08-04 00:00:00		
+VS_MC_RC2_082						Hearing loss		Surveillance	1992-04-26 00:00:00		
+VS_MC_RC2_082						Hearing loss		Surveillance	1993-05-14 00:00:00		
+VS_MC_RC2_082						Hearing loss		Surveillance	1995-05-06 00:00:00		
+VS_MC_RC2_082						Hearing loss		Surveillance	1996-06-04 00:00:00		
+VS_MC_RC2_082						Hearing loss		Surveillance	2001-07-14 00:00:00		
+VS_MC_RC2_083	White - British			M	50.8	Hearing loss		Surgery	1993-05-13 00:00:00	1994-01-08 00:00:00	
+VS_MC_RC2_083	White - British			M	54.7	"Hearing loss, Facial weakness"		Surveillance	1997-04-07 00:00:00		
+VS_MC_RC2_083	White - British			M	55.7	Hearing loss		Surveillance	1998-04-01 00:00:00		
+VS_MC_RC2_083	White - British			M	57.8				2000-05-10 00:00:00		
+VS_MC_RC2_084	White - British			M	51.8	"Hearing loss, Tinnitus"		Surveillance	1992-05-12 00:00:00		
+VS_MC_RC2_087	White - British			F	45.1	"Dizziness, Headache"		Surveillance	1992-08-06 00:00:00		
+VS_MC_RC2_087	White - British			F	45.5	"Dizziness, Headache"		Surveillance	1993-01-09 00:00:00		
+VS_MC_RC2_087	White - British			F	46.1	"Hearing loss, Dizziness, Headache"		Surveillance	1993-09-06 00:00:00		
+VS_MC_RC2_087	White - British			F	47.1	"Dizziness, Headache"		Surveillance	1994-08-20 00:00:00		
+VS_MC_RC2_087	White - British			F	52	"Dizziness, Facial numbness"		Surveillance	1999-07-18 00:00:00		
+VS_MC_RC2_088	White - British			F	65.7	"Hearing loss, Balance disturbance"		Surgery	1991-03-12 00:00:00	1992-04-11 00:00:00	
+VS_MC_RC2_088	White - British			F	67.1	"Hearing loss, Balance disturbance, Facial weakness"		Surveillance	1992-08-21 00:00:00		
+VS_MC_RC2_088	White - British			F	68.1	"Hearing loss, Balance disturbance, Facial weakness"		Surveillance	1993-08-15 00:00:00		
+VS_MC_RC2_088	White - British			F	69	"Hearing loss, Balance disturbance, Facial weakness"		Surveillance	1994-07-29 00:00:00		
+VS_MC_RC2_089	NR			M	71.1	Hearing loss		Surveillance	1992-09-08 00:00:00		
+VS_MC_RC2_089	NR			M	74.3	Hearing loss		Surveillance	1995-10-19 00:00:00		
+VS_MC_RC2_089	NR			M	79.8	Hearing loss		Surveillance	2001-04-17 00:00:00		
+VS_MC_RC2_090	NR			F	39.1	"Hearing loss, Dizziness"		Surveillance	1992-08-08 00:00:00		
+VS_MC_RC2_090	NR			F	40.1	"Hearing loss, Dizziness"		Surveillance	1993-08-30 00:00:00		
+VS_MC_RC2_090	NR			F	44.1	"Hearing loss, Dizziness"		Surveillance	1997-08-25 00:00:00		
+VS_MC_RC2_092	White - English			M	33.9	Hearing loss		Surveillance	1992-06-16 00:00:00		
+VS_MC_RC2_092	White - English			M	34.3	Hearing loss		Surveillance	1992-11-10 00:00:00		
+VS_MC_RC2_092	White - English			M	34.9	Hearing loss		Surveillance	1993-06-07 00:00:00	Surgery 1995-06-03	
+VS_MC_RC2_092	White - English			M	42.6	"Hearing loss, Facial weakness"		Surveillance	2001-02-10 00:00:00		
+VS_MC_RC2_093	NR			M	63.8	"Hearing loss, Tinnitus"		Surveillance	1992-05-15 00:00:00		
+VS_MC_RC2_093	NR			M	64.8	"Hearing loss, Tinnitus"		Surveillance	1993-05-20 00:00:00		
+VS_MC_RC2_094	White - British	Surgery 1986		M	71.1	"Hearing loss, Balance disturbance"		SRS	1992-08-29 00:00:00	1993-04-11 00:00:00	
+VS_MC_RC2_094	White - British	Surgery 1986		M	72.1	Hearing loss		Surveillance	1993-08-31 00:00:00		
+VS_MC_RC2_098						Hearing loss		Surveillance	1992-04-21 00:00:00		
+VS_MC_RC2_098						"Hearing loss, Facial numbness"		Surveillance	1995-08-29 00:00:00	SRS 1993-09-03	
+VS_MC_RC2_099	White - British			M	63.1	Hearing loss		Surgery	1992-08-28 00:00:00	1992-12-05 00:00:00	
+VS_MC_RC2_099	White - British			M	63.7	Hearing loss		Surveillance	1993-03-28 00:00:00		
+VS_MC_RC2_099	White - British			M	64.4	Hearing loss		Surveillance	1993-12-04 00:00:00		
+VS_MC_RC2_099	White - British			M	65.5	Hearing loss		Surveillance	1995-01-05 00:00:00		
+VS_MC_RC2_099	White - British			M	69.5	Hearing loss		Surveillance	1998-12-29 00:00:00		
+VS_MC_RC2_099	White - British			M	71.6	Hearing loss		Surveillance	2001-02-10 00:00:00		
+VS_MC_RC2_100	White - British	SRS 1989		M	83.8	Hearing loss		Surveillance	1992-04-22 00:00:00		
+VS_MC_RC2_100	White - British	SRS 1989		M	84.9	Hearing loss		Surveillance	1993-05-28 00:00:00		
+VS_MC_RC2_101	NR			F	69.7	Hearing loss		Surveillance	1994-03-13 00:00:00		
+VS_MC_RC2_101	NR			F	71.6	Hearing loss		Surveillance	1996-02-21 00:00:00		
+VS_MC_RC2_101	NR			F	74.6	Hearing loss		Surveillance	1999-02-28 00:00:00		
+VS_MC_RC2_102	White - British			M	61.9	Hearing loss		Surveillance	1992-06-01 00:00:00		
+VS_MC_RC2_102	White - British			M	65.6	Hearing loss		Surveillance	1996-02-19 00:00:00		
+VS_MC_RC2_102	White - British			M	67.6	Hearing loss		Surveillance	1998-03-10 00:00:00		
+VS_MC_RC2_102	White - British			M	70.8	Hearing loss		Surveillance	2001-05-10 00:00:00		
+VS_MC_RC2_103		Surgery 1986				Hearing loss		Surveillance	1992-07-31 00:00:00		
+VS_MC_RC2_104	NR			M	53.8	Hearing loss		Surveillance	1992-04-30 00:00:00		
+VS_MC_RC2_104	NR			M	55.9	Hearing loss		Surveillance	1994-05-29 00:00:00		
+VS_MC_RC2_104	NR			M	56.8	Hearing loss		Surveillance	1995-05-17 00:00:00		
+VS_MC_RC2_104	NR			M	60.7	Hearing loss		Surveillance	1999-03-24 00:00:00		
+VS_MC_RC2_104	NR			M	62.8	Hearing loss		Surveillance	2001-04-25 00:00:00		
+VS_MC_RC2_105	White - British			F	72.4	"Hearing loss, Balance disturbance, Facial numbness"		Surveillance	1991-12-11 00:00:00	SRS 1995-08-26	
+VS_MC_RC2_105	White - British			F	77.1	"Hearing loss, Balance disturbance, Facial numbness"		Surveillance	1996-08-05 00:00:00		
+VS_MC_RC2_105	White - British			F	79.3	"Hearing loss, Balance disturbance"		Surveillance	1998-10-25 00:00:00		
+VS_MC_RC2_106	White - Any other White background			F	58.8	Hearing loss		Surgery	1992-05-18 00:00:00	1993-01-16 00:00:00	
+VS_MC_RC2_106	White - Any other White background			F	59.8	Hearing loss		Surveillance	1993-05-02 00:00:00		No visible residual. Annotation not provided.
+VS_MC_RC2_106	White - Any other White background			F	60.9	Hearing loss		Surveillance	1994-06-16 00:00:00		No visible residual. Annotation not provided.
+VS_MC_RC2_106	White - Any other White background			F	64.4	Hearing loss		Surveillance	1997-12-06 00:00:00		No visible residual. Annotation not provided.
+VS_MC_RC2_106	White - Any other White background			F	66.4	Hearing loss		Surveillance	1999-12-18 00:00:00		No visible residual. Annotation not provided.
+VS_MC_RC2_107						Hearing loss		Surveillance	1992-07-18 00:00:00		
+VS_MC_RC2_108	White - British			M	61.1	"Hearing loss, Tinnitus, Speech problems"		Surveillance	1992-08-11 00:00:00		
+VS_MC_RC2_108	White - British			M	62.1	"Hearing loss, Tinnitus, Speech problems"		Surveillance	1993-08-24 00:00:00		
+VS_MC_RC2_108	White - British			M	64.8	"Hearing loss, Tinnitus, Speech problems"		Surveillance	1996-04-24 00:00:00		
+VS_MC_RC2_109	White - British					"Hearing loss, Balance disturbance"		Surveillance	1992-08-22 00:00:00		
+VS_MC_RC2_110	NR			F	82.2	Speech problems		Surveillance	1992-09-26 00:00:00		
+VS_MC_RC2_111	White - British			M	38	"Hearing loss, Facial numbness"		Surgery	1992-08-01 00:00:00	1992-11-26 00:00:00	
+VS_MC_RC2_112	Any Other Ethnic Group	Surgery 1990		F	51.1	"Hearing loss, Tinnitus"		Surveillance	1991-08-26 00:00:00		
+VS_MC_RC2_112	Any Other Ethnic Group	Surgery 1990		F	52.2	"Hearing loss, Tinnitus"		Surveillance	1992-09-27 00:00:00		
+VS_MC_RC2_112	Any Other Ethnic Group	Surgery 1990		F	53.2	"Hearing loss, Tinnitus, Facial numbness"		SRS	1993-09-14 00:00:00	1994-09-10 00:00:00	
+VS_MC_RC2_113	White - British			M	59.5	"Hearing loss, Tinnitus"		SRS	1993-01-15 00:00:00	1993-04-02 00:00:00	
+VS_MC_RC2_113	White - British			M	60.1	"Hearing loss, Tinnitus"		Surveillance	1993-08-20 00:00:00		
+VS_MC_RC2_113	White - British			M	61.7	"Hearing loss, Tinnitus"		Surveillance	1995-03-17 00:00:00		
+VS_MC_RC2_114	White - British	Surgery 1977 and 1985		F	41.2	"Facial weakness, Hearing loss, Tinnitus"		Surveillance	1992-10-06 00:00:00		
+VS_MC_RC2_114	White - British	Surgery 1977 and 1985		F	43.3	"Hearing loss, Tinnitus, Facial weakness"		Surveillance	1994-10-25 00:00:00		
+VS_MC_RC2_114	White - British	Surgery 1977 and 1985		F	49.9	"Hearing loss, Tinnitus, Headache, Facial weakness"		Surveillance	2001-06-06 00:00:00		
+VS_MC_RC2_115	White - English	Surgery 1986		M	44.1	"Hearing loss, Facial numbness, Headache, Balance disturbance"		Surveillance	1992-09-05 00:00:00		
+VS_MC_RC2_115	White - English	Surgery 1986		M	45.1	"Hearing loss, Facial weakness, Facial numbness"		SRS	1993-09-03 00:00:00	1994-06-28 00:00:00	
+VS_MC_RC2_115	White - English	Surgery 1986		M	46.4	"Hearing loss, Facial weakness, Facial numbness"		Surveillance	1994-12-20 00:00:00		
+VS_MC_RC2_115	White - English	Surgery 1986		M	49.6	"Hearing loss, Facial weakness, Facial numbness"		Surveillance	1998-02-14 00:00:00		
+VS_MC_RC2_115	White - English	Surgery 1986		M	51.6	"Hearing loss, Facial weakness, Facial numbness"		Surveillance	2000-02-21 00:00:00		
+VS_MC_RC2_116	NR	SRS 1985		M		Hearing loss		Surveillance	1992-09-26 00:00:00		
+VS_MC_RC2_116	NR	SRS 1985		M		Hearing loss		Surveillance	1995-02-10 00:00:00		
+VS_MC_RC2_116	NR	SRS 1985		M		Hearing loss		Surveillance	1996-09-18 00:00:00		
+VS_MC_RC2_116	NR	SRS 1985		M		Hearing loss		Surveillance	1999-11-05 00:00:00		
+VS_MC_RC2_117						Hearing loss		Surveillance	1992-10-09 00:00:00		
+VS_MC_RC2_118	NR			F	69.2	"Hearing loss, Balance disturbance"		Surveillance	1992-09-10 00:00:00		
+VS_MC_RC2_118	NR			F	71.2	"Hearing loss, Balance disturbance"		Surveillance	1994-10-05 00:00:00		
+VS_MC_RC2_121	White - British	SRS 1990		F	61.2	Facial weakness		Surveillance	1992-10-02 00:00:00		
+VS_MC_RC2_121	White - British	SRS 1990		F	64.2	Facial weakness		Surveillance	1995-09-15 00:00:00		
+VS_MC_RC2_121	White - British	SRS 1990		F	65.1	Facial weakness		Surveillance	1996-09-07 00:00:00		
+VS_MC_RC2_121	White - British	SRS 1990		F	67.2	Facial weakness		Surveillance	1998-09-14 00:00:00		
+VS_MC_RC2_122	White - British	Surgery 1982		M		"Balance disturbance, Facial numbness, Hearing loss"		Surveillance	1992-11-23 00:00:00		
+VS_MC_RC2_122	White - British	Surgery 1982		M		"Balance disturbance, Facial numbness, Hearing loss"		SRS	1993-11-16 00:00:00	1994-05-08 00:00:00	
+VS_MC_RC2_122	White - British	Surgery 1982		M		"Hearing loss, Balance disturbance, Facial numbness"		Surveillance	1994-09-27 00:00:00		
+VS_MC_RC2_123	White - British			M	42.1	Hearing loss		Surveillance	1992-08-07 00:00:00		
+VS_MC_RC2_123	White - British			M	44	Hearing loss		Surveillance	1994-07-26 00:00:00		
+VS_MC_RC2_123	White - British			M	44.4	Hearing loss		SRS	1994-12-18 00:00:00	1995-09-12 00:00:00	
+VS_MC_RC2_123	White - British			M	46.1	Hearing loss		Surveillance	1996-08-16 00:00:00		
+VS_MC_RC2_123	White - British			M	47.6	Hearing loss		Surveillance	1998-02-07 00:00:00		
+VS_MC_RC2_124	NR			M	83.4	"Hearing loss, Balance disturbance, Headache"		Surveillance	1993-12-28 00:00:00		
+VS_MC_RC2_124	NR			M	84.9	"Hearing loss, Balance disturbance"		Surveillance	1995-06-01 00:00:00		
+VS_MC_RC2_124	NR			M	85.8	"Hearing loss, Balance disturbance"		Surveillance	1996-05-11 00:00:00		
+VS_MC_RC2_126	White - British			M	62	"Hearing loss, Tinnitus"		Surveillance	1991-08-02 00:00:00		
+VS_MC_RC2_126	White - British			M	63.4	"Hearing loss, Tinnitus"		Surveillance	1992-12-05 00:00:00		
+VS_MC_RC2_126	White - British			M	66.5	"Hearing loss, Tinnitus"		Surveillance	1996-01-16 00:00:00		
+VS_MC_RC2_126	White - British			M	69.9	"Hearing loss, Tinnitus"		Surveillance	1999-06-14 00:00:00		
+VS_MC_RC2_127		SRS 1979				"Headache, Balance disturbance"		Surveillance	1993-06-07 00:00:00		
+VS_MC_RC2_128	White - English			F	66.9	"Hearing loss, Tinnitus, Balance disturbance"		Surveillance	1994-06-20 00:00:00		
+VS_MC_RC2_128	White - English			F	69.3	"Hearing loss, Tinnitus, Balance disturbance"		Surveillance	1996-11-18 00:00:00		
+VS_MC_RC2_129	NR			M	53.3	Hearing loss		SRS	1992-10-17 00:00:00	1993-06-16 00:00:00	
+VS_MC_RC2_129	NR			M	60.1	"Hearing loss, Tinnitus"		Surveillance	1999-08-23 00:00:00		
+VS_MC_RC2_130						Hearing loss		Surveillance	1992-11-06 00:00:00		
+VS_MC_RC2_130						Hearing loss		Surveillance	1994-04-07 00:00:00		
+VS_MC_RC2_131	White - British			M	46	Hearing loss		Surveillance	1997-07-05 00:00:00		
+VS_MC_RC2_132	NR			M	55	Hearing loss		Surveillance	1992-07-25 00:00:00		
+VS_MC_RC2_132	NR			M	56.1	Hearing loss		Surveillance	1993-08-29 00:00:00		
+VS_MC_RC2_132	NR			M	57.2	Hearing loss		SRS	1994-10-08 00:00:00	1995-04-04 00:00:00	
+VS_MC_RC2_132	NR			M	58.5	Hearing loss		Surveillance	1996-01-18 00:00:00		
+VS_MC_RC2_132	NR			M	59.6	Hearing loss		Surveillance	1997-02-22 00:00:00		
+VS_MC_RC2_133	NR			F	65.4	"Hearing loss, Dizziness, Balance disturbance"		Surveillance	1990-11-30 00:00:00		
+VS_MC_RC2_133	NR			F	68.2	"Hearing loss, Dizziness, Balance disturbance"		Surveillance	1993-09-24 00:00:00		
+VS_MC_RC2_133	NR			F	69.3	"Hearing loss, Dizziness, Balance disturbance"		Surveillance	1994-10-29 00:00:00		
+VS_MC_RC2_133	NR			F	71.2	"Hearing loss, Dizziness, Balance disturbance"		Surveillance	1996-10-16 00:00:00		
+VS_MC_RC2_133	NR			F	73.3	"Hearing loss, Dizziness, Balance disturbance"		Surveillance	1998-11-11 00:00:00		
+VS_MC_RC2_133	NR			F	74.3	"Hearing loss, Dizziness, Balance disturbance"		Surveillance	1999-11-07 00:00:00		
+VS_MC_RC2_134						"Hearing loss, Balance disturbance"		Surveillance	1992-10-26 00:00:00		
+VS_MC_RC2_134						"Hearing loss, Balance disturbance"		SRS	1993-11-20 00:00:00	1994-04-20 00:00:00	
+VS_MC_RC2_134						"Hearing loss, Balance disturbance"		Surveillance	1997-03-12 00:00:00		
+VS_MC_RC2_134						"Hearing loss, Balance disturbance"		Surveillance	1999-02-05 00:00:00		
+VS_MC_RC2_135	NR			M	35.6	"Hearing loss, Tinnitus"		Surveillance	1992-03-10 00:00:00		
+VS_MC_RC2_135	NR			M	36.4	"Hearing loss, Tinnitus"		Surveillance	1992-12-22 00:00:00		
+VS_MC_RC2_135	NR			M	39.8	"Hearing loss, Tinnitus"		Surveillance	1996-05-22 00:00:00		
+VS_MC_RC2_135	NR			M	42.2	"Hearing loss, Tinnitus"		Surveillance	1998-09-28 00:00:00		
+VS_MC_RC2_135	NR			M	43.4	"Hearing loss, Tinnitus"		Surveillance	1999-12-28 00:00:00		
+VS_MC_RC2_136	Black or Black British - Caribbean			M	39.2	Hearing loss		Surveillance	1992-10-05 00:00:00		
+VS_MC_RC2_136	Black or Black British - Caribbean			M	41.2	Hearing loss		Surveillance	1994-09-26 00:00:00		
+VS_MC_RC2_136	Black or Black British - Caribbean			M	42.2	Hearing loss		SRS	1995-09-16 00:00:00	1996-03-16 00:00:00	
+VS_MC_RC2_136	Black or Black British - Caribbean			M	43.7	Hearing loss		Surveillance	1997-04-09 00:00:00		
+VS_MC_RC2_137	White - British			M	31.2	Hearing loss		Surveillance	1992-10-16 00:00:00		
+VS_MC_RC2_137	White - British			M	32.1	"Hearing loss, Tinnitus"		Surveillance	1993-08-22 00:00:00		
+VS_MC_RC2_137	White - British			M	33.2	"Hearing loss, Tinnitus"		Surveillance	1994-10-02 00:00:00		
+VS_MC_RC2_137	White - British			M	34.2	"Hearing loss, Tinnitus"		Surveillance	1995-09-15 00:00:00		
+VS_MC_RC2_137	White - British			M	36.2	Hearing loss		Surveillance	1997-10-08 00:00:00		
+VS_MC_RC2_137	White - British			M	39.7	Hearing loss		Surveillance	2001-04-05 00:00:00		
+VS_MC_RC2_138	White - British	Surgery 1990		F	60.6	"Hearing loss, Tinnitus, Balance disturbance"		Surveillance	1992-02-04 00:00:00		
+VS_MC_RC2_138	White - British	Surgery 1990		F	61.7	"Hearing loss, Tinnitus, Balance disturbance, Facial numbness"		Surveillance	1993-04-06 00:00:00		
+VS_MC_RC2_140	White - British			F	58.3	"Hearing loss, Tinnitus, Balance disturbance"		Surveillance	1998-11-13 00:00:00		
+VS_MC_RC2_141	NR			M	51	Hearing loss		Surveillance	1992-07-31 00:00:00		
+VS_MC_RC2_142	White - British			M	49.2	Tinnitus		Surveillance	1990-10-14 00:00:00		
+VS_MC_RC2_142	White - British			M	50.2	Tinnitus		Surveillance	1991-09-22 00:00:00		
+VS_MC_RC2_142	White - British			M	51.2	Tinnitus		Surveillance	1992-10-03 00:00:00		
+VS_MC_RC2_142	White - British			M	53.2	Tinnitus		Surveillance	1994-09-26 00:00:00		
+VS_MC_RC2_142	White - British			M	56.3	Tinnitus		Surveillance	1997-11-07 00:00:00		
+VS_MC_RC2_142	White - British			M	58.2	Other	None	Surveillance	1999-10-06 00:00:00		
+VS_MC_RC2_143	White - British			M	67	"Hearing loss, Balance disturbance"		Surveillance	1993-07-27 00:00:00		
+VS_MC_RC2_143	White - British			M	68.1	"Hearing loss, Balance disturbance"		Surveillance	1994-08-09 00:00:00		
+VS_MC_RC2_143	White - British			M	69.2	"Hearing loss, Balance disturbance"		Surveillance	1995-09-15 00:00:00		
+VS_MC_RC2_143	White - British			M	70	"Hearing loss, Balance disturbance"		Surveillance	1996-07-31 00:00:00		
+VS_MC_RC2_143	White - British			M	72.1	"Hearing loss, Balance disturbance"		Surveillance	1998-08-30 00:00:00		
+VS_MC_RC2_144	White - British			M	68.2	Hearing loss		Surveillance	1992-10-16 00:00:00		
+VS_MC_RC2_144	White - British			M	69.3	Hearing loss		Surveillance	1993-11-10 00:00:00		
+VS_MC_RC2_144	White - British			M	70.3	Hearing loss		Surveillance	1994-10-29 00:00:00		
+VS_MC_RC2_145	White - British			M		Hearing loss		Surveillance	1992-10-12 00:00:00		
+VS_MC_RC2_145	White - British			M		Hearing loss		Surveillance	1997-01-21 00:00:00		
+VS_MC_RC2_146	NR	Surgery 1987		F	65.3	"Hearing loss, Balance disturbance, Facial numbness"		Surveillance	1992-10-25 00:00:00		
+VS_MC_RC2_146	NR	Surgery 1987		F	67.3	"Hearing loss, Balance disturbance"		Surveillance	1994-10-19 00:00:00		
+VS_MC_RC2_146	NR	Surgery 1987		F	72.5	"Hearing loss, Balance disturbance"		Surveillance	2000-01-02 00:00:00		
+VS_MC_RC2_147	White - British			M	46.7	"Hearing loss, Tinnitus"		Surveillance	1992-04-07 00:00:00		
+VS_MC_RC2_147	White - British			M	47.8	"Hearing loss, Tinnitus"		SRS	1993-04-24 00:00:00	1993-08-27 00:00:00	
+VS_MC_RC2_147	White - British			M	48.6	"Hearing loss, Tinnitus, Balance disturbance"		Surveillance	1994-03-11 00:00:00		
+VS_MC_RC2_147	White - British			M	49.7	"Hearing loss, Tinnitus"		Surveillance	1995-03-28 00:00:00		
+VS_MC_RC2_147	White - British			M	51.8	"Hearing loss, Tinnitus"		Surveillance	1997-04-26 00:00:00		
+VS_MC_RC2_147	White - British			M	54.2	"Hearing loss, Tinnitus"		Surveillance	1999-09-14 00:00:00		
+VS_MC_RC2_148	White - British			F	67.3	Hearing loss		Surveillance	1992-11-13 00:00:00		
+VS_MC_RC2_151	White - British	SRS 1989		F	64.5	"Hearing loss, Facial numbness"		Surgery	1993-01-08 00:00:00		
+VS_MC_RC2_151	White - British	SRS 1989		F	65.5	"Hearing loss, Facial numbness, Facial weakness"		Surveillance	1994-01-14 00:00:00		
+VS_MC_RC2_151	White - British	SRS 1989		F	66.1	"Hearing loss, Facial numbness"		Surveillance	1994-08-12 00:00:00		
+VS_MC_RC2_151	White - British	SRS 1989		F	70.1	"Hearing loss, Facial numbness"		Surveillance	1998-08-07 00:00:00		
+VS_MC_RC2_152	White - British	Surgery 1988		F	78.4	"Hearing loss, Facial weakness"		Surveillance	1992-12-07 00:00:00		
+VS_MC_RC2_153						"Hearing loss, Tinnitus"		Surveillance	1992-04-29 00:00:00		
+VS_MC_RC2_153						"Hearing loss, Tinnitus"		Surveillance	1993-04-26 00:00:00		
+VS_MC_RC2_153						"Hearing loss, Tinnitus"		Surveillance	1994-05-07 00:00:00		
+VS_MC_RC2_153						"Hearing loss, Tinnitus"		Surveillance	1995-05-20 00:00:00		
+VS_MC_RC2_154	White - British			F	59.3	"Hearing loss, Facial weakness"		Surveillance	1992-11-13 00:00:00		
+VS_MC_RC2_155	NR	SRS 1987		F	53.3	"Hearing loss, Dizziness, Headache"		Surveillance	1992-10-19 00:00:00		
+VS_MC_RC2_157	White - English			M	48.1	Hearing loss		Surveillance	1992-09-06 00:00:00		
+VS_MC_RC2_157	White - English			M	49.7	Hearing loss		SRS	1994-04-16 00:00:00	1994-08-17 00:00:00	
+VS_MC_RC2_157	White - English			M	51	Hearing loss		Surveillance	1995-08-02 00:00:00		
+VS_MC_RC2_157	White - English			M	52	Hearing loss		Surveillance	1996-07-17 00:00:00		
+VS_MC_RC2_157	White - English			M	53.1	Hearing loss		Surveillance	1997-08-06 00:00:00		
+VS_MC_RC2_157	White - English			M	54.1	Hearing loss		Surveillance	1998-09-08 00:00:00		
+VS_MC_RC2_158	White - Any other White background			M	64.3	"Hearing loss, Tinnitus"		Surveillance	1992-11-19 00:00:00		
+VS_MC_RC2_158	White - Any other White background			M	65.4	"Hearing loss, Tinnitus"		Surveillance	1993-11-24 00:00:00		
+VS_MC_RC2_158	White - Any other White background			M	66.4	"Hearing loss, Tinnitus"		SRS	1994-11-23 00:00:00	1995-06-27 00:00:00	
+VS_MC_RC2_158	White - Any other White background			M	68.8	"Hearing loss, Tinnitus"		Surveillance	1997-05-20 00:00:00		
+VS_MC_RC2_158	White - Any other White background			M	69.8	Hearing loss		Surveillance	1998-05-15 00:00:00		
+VS_MC_RC2_159	NR			F	45.4	Dizziness		Surveillance	1992-12-15 00:00:00		
+VS_MC_RC2_159	NR			F	46.7	Other	None	Surveillance	1994-03-22 00:00:00		
+VS_MC_RC2_159	NR			F	47.4	Other	None	Surveillance	1994-12-20 00:00:00		
+VS_MC_RC2_159	NR			F	48.4	Other	None	Surveillance	1995-12-22 00:00:00		
+VS_MC_RC2_159	NR			F	51.8	"Hearing loss, Dizziness, Tinnitus"		SRS	1999-05-16 00:00:00	1999-08-17 00:00:00	
+VS_MC_RC2_160	NR			F	83	"Hearing loss, Facial weakness"		Surveillance	1990-07-20 00:00:00		
+VS_MC_RC2_160	NR			F	85.5	"Hearing loss, Facial weakness"		Surveillance	1993-01-02 00:00:00		
+VS_MC_RC2_162		SRS 1990	Passed away 1999			Hearing loss		Surveillance	1992-12-26 00:00:00		
+VS_MC_RC2_162		SRS 1990	Passed away 1999			Hearing loss		Surveillance	1993-12-17 00:00:00		
+VS_MC_RC2_162		SRS 1990	Passed away 1999			Hearing loss		Surveillance	1994-12-13 00:00:00		
+VS_MC_RC2_162		SRS 1990	Passed away 1999			Hearing loss		Surveillance	1995-12-06 00:00:00		
+VS_MC_RC2_162		SRS 1990	Passed away 1999			Hearing loss		Surveillance	1997-11-20 00:00:00		
+VS_MC_RC2_163	White - British			F	79.4	Hearing loss		Surveillance	1992-11-23 00:00:00		
+VS_MC_RC2_163	White - British			F	81.5	Hearing loss		Surveillance	1995-01-03 00:00:00		
+VS_MC_RC2_164	NR			F	35.7	"Hearing loss, Dizziness, Headache"		Surgery	1991-03-26 00:00:00	1991-09-21 00:00:00	
+VS_MC_RC2_164	NR			F	36.5	"Hearing loss, Facial numbness"		Surveillance	1992-01-18 00:00:00		
+VS_MC_RC2_164	NR			F	37.5	Hearing loss		Surveillance	1993-01-25 00:00:00		
+VS_MC_RC2_164	NR			F	38.5	Hearing loss		Surveillance	1994-01-09 00:00:00		
+VS_MC_RC2_164	NR			F	42.2	"Hearing loss, Facial numbness"		Surveillance	1997-10-04 00:00:00		
+VS_MC_RC2_165						"Facial weakness, Facial numbness, Tinnitus, Hearing loss"		Surveillance	1992-12-21 00:00:00		
+VS_MC_RC2_165						"Hearing loss, Tinnitus, Facial numbness"		Surveillance	1995-01-17 00:00:00		
+VS_MC_RC2_166	White - British			M	77.4	"Hearing loss, Tinnitus"		Surveillance	1992-12-07 00:00:00		
+VS_MC_RC2_167	White - British			F	63.4	Hearing loss		Surveillance	1992-12-08 00:00:00		
+VS_MC_RC2_167	White - British			F	67.4	Hearing loss		Surveillance	1996-12-11 00:00:00		
+VS_MC_RC2_167	White - British			F	69	Hearing loss		Surveillance	1998-06-30 00:00:00		
+VS_MC_RC2_167	White - British			F	69.4	Hearing loss		Surveillance	1998-12-16 00:00:00		
+VS_MC_RC2_168	White - British	"Surgery 1984, SRS 1987"		M	62.6	Hearing loss		Surveillance	1993-03-08 00:00:00		
+VS_MC_RC2_169	White - English			M	65.5	Hearing loss		SRS	1993-01-12 00:00:00	1993-05-17 00:00:00	
+VS_MC_RC2_169	White - English			M	66.2	Hearing loss		Surveillance	1993-10-10 00:00:00		
+VS_MC_RC2_169	White - English			M	67.9	Hearing loss		Surveillance	1995-06-05 00:00:00		
+VS_MC_RC2_169	White - English			M	70	Hearing loss		Surveillance	1997-07-02 00:00:00		
+VS_MC_RC2_169	White - English			M	72	Hearing loss		Surveillance	1999-08-03 00:00:00		
+VS_MC_RC2_170	White - British			F	70.4	"Hearing loss, Tinnitus, Dizziness"		Surveillance	1992-12-07 00:00:00		
+VS_MC_RC2_170	White - British			F	71.5	"Hearing loss, Tinnitus"		Surveillance	1994-01-17 00:00:00		
+VS_MC_RC2_170	White - British			F	72.5	"Hearing loss, Tinnitus"		Surveillance	1995-01-22 00:00:00		
+VS_MC_RC2_170	White - British			F	74.5	"Hearing loss, Tinnitus"		Surveillance	1997-01-15 00:00:00		
+VS_MC_RC2_170	White - British			F	77.3	"Hearing loss, Tinnitus"		Surveillance	1999-10-17 00:00:00		
+VS_MC_RC2_171	White - British			M	65.3	"Hearing loss, Balance disturbance"		SRS	1992-11-14 00:00:00	1993-06-25 00:00:00	
+VS_MC_RC2_171	White - British			M	66.3	"Hearing loss, Balance disturbance"		Surveillance	1993-10-31 00:00:00		
+VS_MC_RC2_171	White - British			M	67.3	"Hearing loss, Balance disturbance"		Surveillance	1994-11-21 00:00:00		
+VS_MC_RC2_171	White - British			M	68.3	"Hearing loss, Balance disturbance"		Surveillance	1995-11-14 00:00:00		
+VS_MC_RC2_171	White - British			M	69.4	Hearing loss		Surveillance	1996-12-04 00:00:00		
+VS_MC_RC2_172	NR			F	70.5	Hearing loss		Surveillance	1993-01-19 00:00:00		
+VS_MC_RC2_172	NR			F	72.5	Hearing loss		Surveillance	1994-12-31 00:00:00		
+VS_MC_RC2_172	NR			F	77.5	Hearing loss		Surveillance	2000-01-11 00:00:00		
+VS_MC_RC2_173	NR	SRS 1980		F		Hearing loss		Surveillance	1993-01-13 00:00:00		
+VS_MC_RC2_173	NR	SRS 1980		F		Hearing loss		Surveillance	1998-01-04 00:00:00		
+VS_MC_RC2_174						Hearing loss		Surveillance	1993-02-13 00:00:00		
+VS_MC_RC2_174						Hearing loss		Surveillance	1998-01-10 00:00:00		
+VS_MC_RC2_175	White - British			M	64.4	Hearing loss		Surveillance	1992-12-13 00:00:00		
+VS_MC_RC2_175	White - British			M	66	Hearing loss		Surveillance	1994-07-30 00:00:00		
+VS_MC_RC2_175	White - British			M	70.2	Hearing loss		Surveillance	1998-09-29 00:00:00		
+VS_MC_RC2_176	NR			F	56.8	Hearing loss		Surveillance	1996-05-04 00:00:00		
+VS_MC_RC2_176	NR			F	58.7	Hearing loss		Surveillance	1998-03-22 00:00:00		
+VS_MC_RC2_178	NR	SRS 1979		F	64.6	"Hearing loss, Balance disturbance"		Surveillance	1993-02-26 00:00:00		
+VS_MC_RC2_178	NR	SRS 1979		F	69.7	"Hearing loss, Balance disturbance"		Surveillance	1998-03-30 00:00:00		
+VS_MC_RC2_178	NR	SRS 1979		F	72.7	Hearing loss		Surveillance	2001-04-14 00:00:00		
+VS_MC_RC2_180	White - Any other White background	SRS 1987		M		Hearing loss		Surveillance	1992-12-29 00:00:00		
+VS_MC_RC2_180	White - Any other White background	SRS 1987		M		Hearing loss		Surveillance	1994-10-28 00:00:00		
+VS_MC_RC2_181	White - British	SRS 1987		F	73.7	"Hearing loss, Facial numbness"		Surveillance	1991-04-03 00:00:00		
+VS_MC_RC2_182						"Hearing loss, Balance disturbance"		Surveillance	1993-02-17 00:00:00		
+VS_MC_RC2_182						"Hearing loss, Balance disturbance"		Surveillance	1995-04-07 00:00:00		
+VS_MC_RC2_182						"Hearing loss, Balance disturbance"		Surveillance	1997-05-23 00:00:00		
+VS_MC_RC2_183	White - British			M	69.6	"Hearing loss, Facial numbness"		Surveillance	1993-02-05 00:00:00		
+VS_MC_RC2_183	White - British			M	73.5	"Hearing loss, Facial numbness"		Surveillance	1997-01-29 00:00:00		
+VS_MC_RC2_183	White - British			M	74.5	"Hearing loss, Facial numbness"		Surveillance	1998-01-23 00:00:00		
+VS_MC_RC2_184	White - English			M	49.5	Hearing loss		Surveillance	1993-01-17 00:00:00		
+VS_MC_RC2_184	White - English			M	50.5	"Hearing loss, Facial numbness"		Surveillance	1994-01-01 00:00:00	SRS 1994-11-08	
+VS_MC_RC2_184	White - English			M	54.3	"Hearing loss, Balance disturbance"		Surveillance	1997-10-18 00:00:00		
+VS_MC_RC2_184	White - English			M	56.2	"Hearing loss, Balance disturbance"		Surveillance	1999-10-11 00:00:00		
+VS_MC_RC2_185	White - British			F	71.4	Hearing loss		Surveillance	1992-12-21 00:00:00		
+VS_MC_RC2_186	NR			M	68.5	Hearing loss		Surveillance	1993-01-29 00:00:00		
+VS_MC_RC2_186	NR			M	69.6	Hearing loss		Surveillance	1994-02-08 00:00:00		
+VS_MC_RC2_186	NR			M	69.9	Hearing loss		Surveillance	1994-06-14 00:00:00		
+VS_MC_RC2_186	NR			M	71	Hearing loss		Surveillance	1995-07-19 00:00:00		
+VS_MC_RC2_186	NR			M	74.9	Hearing loss		Surveillance	1999-06-14 00:00:00		
+VS_MC_RC2_186	NR			M	77	Hearing loss		Surveillance	2001-07-29 00:00:00		
+VS_MC_RC2_188	White - British			M	53.6	Hearing loss		Surveillance	1992-02-08 00:00:00		
+VS_MC_RC2_188	White - British			M	57.6	Hearing loss		Surveillance	1996-02-07 00:00:00		
+VS_MC_RC2_188	White - British			M	59.5	Hearing loss		Surveillance	1998-01-21 00:00:00		
+VS_MC_RC2_189	White - British			F		"Hearing loss, Tinnitus"		Surveillance	1992-12-13 00:00:00		
+VS_MC_RC2_189	White - British			F		"Hearing loss, Tinnitus"		Surveillance	1997-12-31 00:00:00		
+VS_MC_RC2_190	Asian or Asian British - Chinese	"Surgery 1978, SRS 1991"		F	49.6	"Hearing loss, Balance disturbance"		Surveillance	1997-02-09 00:00:00		
+VS_MC_RC2_191	White - British			M	53.3	"Hearing loss, Tinnitus"		Surveillance	1990-11-09 00:00:00		
+VS_MC_RC2_191	White - British			M	55.3	"Hearing loss, Tinnitus"		Surveillance	1992-11-03 00:00:00		
+VS_MC_RC2_191	White - British			M	56.4	"Hearing loss, Tinnitus"		Surveillance	1993-12-26 00:00:00		
+VS_MC_RC2_191	White - British			M	58.4	"Hearing loss, Tinnitus"		Surveillance	1995-12-13 00:00:00		
+VS_MC_RC2_191	White - British			M	64.2	"Hearing loss, Tinnitus"		Surveillance	2001-09-28 00:00:00		
+VS_MC_RC2_192	White - British			M	35.5	"Hearing loss, Facial numbness"		Surgery	1993-01-09 00:00:00	1993-03-23 00:00:00	
+VS_MC_RC2_192	White - British			M	35.9	Hearing loss		Surveillance	1993-05-27 00:00:00		
+VS_MC_RC2_192	White - British			M	36.4	Hearing loss		Surveillance	1993-12-14 00:00:00		
+VS_MC_RC2_192	White - British			M	37.3	Hearing loss		Surveillance	1994-10-29 00:00:00		
+VS_MC_RC2_192	White - British			M	40.6	Other	None	Surveillance	1998-02-21 00:00:00		
+VS_MC_RC2_193						Hearing loss		Surveillance	1992-11-18 00:00:00		
+VS_MC_RC2_193						Hearing loss		Surveillance	1993-08-21 00:00:00		
+VS_MC_RC2_194	White - British	Surgery 1990		F	69.6	Hearing loss		Surveillance	1993-03-09 00:00:00		
+VS_MC_RC2_194	White - British	Surgery 1990		F	76.1	Hearing loss		Surveillance	1999-09-04 00:00:00		
+VS_MC_RC2_195	White - British			M	51.5	"Hearing loss, Facial weakness"		Surveillance	1992-01-23 00:00:00		
+VS_MC_RC2_195	White - British			M	52.8	"Hearing loss, Facial weakness, Headache"		Surveillance	1993-05-23 00:00:00		
+VS_MC_RC2_195	White - British			M	55	"Hearing loss, Facial weakness"		Surveillance	1995-07-15 00:00:00		
+VS_MC_RC2_195	White - British			M	59.8	"Hearing loss, Facial weakness, Balance disturbance"		Surveillance	2000-05-05 00:00:00		
+VS_MC_RC2_196	White - British	Surgery 1988		F	61.6	"Hearing loss, Tinnitus, Balance disturbance"		SRS	1993-02-23 00:00:00	1993-10-09 00:00:00	
+VS_MC_RC2_196	White - British	Surgery 1988		F	63.2	"Hearing loss, Tinnitus"		Surveillance	1994-09-16 00:00:00		
+VS_MC_RC2_196	White - British	Surgery 1988		F	66.2	"Hearing loss, Tinnitus"		Surveillance	1997-09-21 00:00:00		
+VS_MC_RC2_196	White - British	Surgery 1988		F	68.2	"Hearing loss, Tinnitus"		Surveillance	1999-10-07 00:00:00		
+VS_MC_RC2_198	 Mixed - Asian & Chinese			M	46.7	"Hearing loss, Tinnitus"		Surveillance	1993-04-11 00:00:00		
+VS_MC_RC2_198	 Mixed - Asian & Chinese			M	47.2	"Hearing loss, Tinnitus"		Surveillance	1993-09-26 00:00:00		
+VS_MC_RC2_198	 Mixed - Asian & Chinese			M	47.8	"Hearing loss, Tinnitus"		SRS	1994-05-22 00:00:00	1994-11-05 00:00:00	
+VS_MC_RC2_198	 Mixed - Asian & Chinese			M	49.7	Hearing loss		Surveillance	1996-04-02 00:00:00		
+VS_MC_RC2_198	 Mixed - Asian & Chinese			M	50.2	Hearing loss		Surveillance	1996-09-11 00:00:00		
+VS_MC_RC2_198	 Mixed - Asian & Chinese			M	51.2	Hearing loss		Surveillance	1997-09-30 00:00:00		
+VS_MC_RC2_199	White - Any other White background			F	32.5	"Headache, Dizziness, Facial weakness, Facial numbness"		Surveillance	1995-01-09 00:00:00		
+VS_MC_RC2_199	White - Any other White background			F	33	"Headache, Facial numbness"		Surveillance	1995-07-31 00:00:00		
+VS_MC_RC2_200	NR			F	64.8	"Headache, Dizziness"		Surveillance	1993-04-25 00:00:00		
+VS_MC_RC2_202	White - English			M	80.7	"Hearing loss, Tinnitus"		SRS	1993-04-03 00:00:00	1993-10-02 00:00:00	
+VS_MC_RC2_202	White - English			M	81.9	"Hearing loss, Tinnitus"		Surveillance	1994-06-25 00:00:00		
+VS_MC_RC2_202	White - English			M	83	"Hearing loss, Tinnitus"		Surveillance	1995-07-14 00:00:00		
+VS_MC_RC2_202	White - English			M	85.3	"Hearing loss, Tinnitus"		Surveillance	1997-11-01 00:00:00		
+VS_MC_RC2_203	White - British			F	58.7	Facial numbness		Surgery	1993-03-26 00:00:00	1993-07-24 00:00:00	
+VS_MC_RC2_203	White - British			F	59.5	"Hearing loss, Facial numbness"		Surveillance	1994-01-30 00:00:00		
+VS_MC_RC2_203	White - British			F	60.5	"Hearing loss, Facial numbness"		SRS	1995-01-16 00:00:00	1995-06-03 00:00:00	
+VS_MC_RC2_203	White - British			F	63.4	"Hearing loss, Facial numbness"		Surveillance	1997-12-07 00:00:00		
+VS_MC_RC2_203	White - British			F	64.4	"Hearing loss, Facial numbness"		Surveillance	1998-12-07 00:00:00		
+VS_MC_RC2_203	White - British			F	65.3	"Hearing loss, Facial numbness"		Surveillance	1999-11-22 00:00:00		
+VS_MC_RC2_205	White - British			M	43.4	"Hearing loss, Facial weakness, Facial numbness"		Surveillance	1993-12-20 00:00:00		
+VS_MC_RC2_205	White - British			M	44	Hearing loss		Surveillance	1994-07-01 00:00:00		
+VS_MC_RC2_205	White - British			M	44.9	Hearing loss		Surveillance	1995-05-27 00:00:00		
+VS_MC_RC2_205	White - British			M	47.8	Hearing loss		Surveillance	1998-05-15 00:00:00		
+VS_MC_RC2_206	White - British			M	55.4	"Hearing loss, Tinnitus, Balance disturbance"		Surveillance	1991-12-21 00:00:00	SRS 1994-04-30	
+VS_MC_RC2_206	White - British			M	60.7	"Hearing loss, Tinnitus"		Surveillance	1997-04-12 00:00:00		
+VS_MC_RC2_206	White - British			M	63.7	"Hearing loss, Tinnitus"		Surveillance	2000-03-31 00:00:00		
+VS_MC_RC2_207	White - British	Surgery 1988		F	70.5	"Hearing loss, Facial numbness"		SRS	1992-01-06 00:00:00	1992-05-16 00:00:00	
+VS_MC_RC2_207	White - British	Surgery 1988		F	71.5	"Hearing loss, Facial numbness"		Surveillance	1993-01-26 00:00:00		
+VS_MC_RC2_207	White - British	Surgery 1988		F	72.5	"Hearing loss, Facial numbness"		Surveillance	1994-01-31 00:00:00		
+VS_MC_RC2_207	White - British	Surgery 1988		F	73.7	"Hearing loss, Facial numbness"		Surveillance	1995-04-13 00:00:00		
+VS_MC_RC2_207	White - British	Surgery 1988		F	74.7	"Hearing loss, Facial numbness"		Surveillance	1996-04-10 00:00:00		
+VS_MC_RC2_207	White - British	Surgery 1988		F	76.7	"Hearing loss, Facial numbness"		Surveillance	1998-03-20 00:00:00		
+VS_MC_RC2_208		Surgery 1980	Passed away 1999			"Hearing loss, Balance disturbance, Facial numbness, Mental confusion"		Surveillance	1993-05-04 00:00:00		
+VS_MC_RC2_208		Surgery 1980	Passed away 1999			"Hearing loss, Facial weakness, Facial numbness"		Surveillance	1994-08-05 00:00:00		
+VS_MC_RC2_208		Surgery 1980	Passed away 1999			"Hearing loss, Facial weakness, Facial numbness"		Surveillance	1995-06-24 00:00:00		
+VS_MC_RC2_209	White - British			M	45.6	Hearing loss		Surveillance	1993-03-02 00:00:00		
+VS_MC_RC2_209	White - British			M	46.1	"Hearing loss, Tinnitus"		SRS	1993-09-03 00:00:00	1994-01-15 00:00:00	
+VS_MC_RC2_209	White - British			M	47.1	"Hearing loss, Tinnitus"		Surveillance	1994-08-05 00:00:00		
+VS_MC_RC2_209	White - British			M	48.4	"Hearing loss, Tinnitus"		Surveillance	1995-12-23 00:00:00		
+VS_MC_RC2_209	White - British			M	49.9	"Hearing loss, Tinnitus"		Surveillance	1997-06-27 00:00:00		
+VS_MC_RC2_209	White - British			M	50.9	"Hearing loss, Tinnitus"		Surveillance	1998-06-01 00:00:00		
+VS_MC_RC2_209	White - British			M	51.9	"Hearing loss, Tinnitus"		Surveillance	1999-06-15 00:00:00		
+VS_MC_RC2_210	White - British	Surgery 1990		F	52.8	"Hearing loss, Headache"		Surveillance	1993-05-03 00:00:00		
+VS_MC_RC2_210	White - British	Surgery 1990		F	56.8	Hearing loss		Surveillance	1997-05-14 00:00:00		
+VS_MC_RC2_210	White - British	Surgery 1990		F	58.9	Hearing loss		Surveillance	1999-06-14 00:00:00		
+VS_MC_RC2_211	White - Other European			F	33.5	Hearing loss		Surveillance	1993-01-02 00:00:00		
+VS_MC_RC2_211	White - Other European			F	34.6	Hearing loss		Surveillance	1994-02-06 00:00:00		
+VS_MC_RC2_211	White - Other European			F	36.7	Hearing loss		Surveillance	1996-03-23 00:00:00		
+VS_MC_RC2_212	White - British	"Surgery 1980, SRS 1987"		F	53.7	"Hearing loss, Facial weakness"		Surveillance	1992-03-11 00:00:00		
+VS_MC_RC2_212	White - British	"Surgery 1980, SRS 1987"		F	55.6	Hearing loss		Surveillance	1994-02-23 00:00:00		
+VS_MC_RC2_212	White - British	"Surgery 1980, SRS 1987"		F	57.6	Hearing loss		Surveillance	1996-02-28 00:00:00		
+VS_MC_RC2_212	White - British	"Surgery 1980, SRS 1987"		F	60.4	Hearing loss		Surveillance	1998-12-24 00:00:00		
+VS_MC_RC2_213	White - British			F	59.9	"Hearing loss, Tinnitus"		Surveillance	1991-06-10 00:00:00		
+VS_MC_RC2_213	White - British			F	61.5	"Hearing loss, Tinnitus"		Surveillance	1993-01-15 00:00:00		
+VS_MC_RC2_213	White - British			F	62.6	"Hearing loss, Tinnitus"		Surveillance	1994-03-01 00:00:00		
+VS_MC_RC2_213	White - British			F	63.8	"Hearing loss, Tinnitus"		Surveillance	1995-04-23 00:00:00		
+VS_MC_RC2_213	White - British			F	65.8	"Hearing loss, Tinnitus"		Surveillance	1997-04-26 00:00:00		
+VS_MC_RC2_214	Asian or Asian British - Vietnamese			M	65	"Hearing loss, Tinnitus"		SRS	1991-07-22 00:00:00	1991-12-15 00:00:00	
+VS_MC_RC2_214	Asian or Asian British - Vietnamese			M	66.5	"Hearing loss, Tinnitus, Balance disturbance"		Surveillance	1993-01-12 00:00:00		
+VS_MC_RC2_214	Asian or Asian British - Vietnamese			M	67.8	"Hearing loss, Tinnitus, Balance disturbance"		Surgery	1994-05-07 00:00:00	1994-07-30 00:00:00	
+VS_MC_RC2_214	Asian or Asian British - Vietnamese			M	68.3	"Hearing loss, Tinnitus, Facial weakness, Facial numbness"		Surveillance	1994-10-22 00:00:00		
+VS_MC_RC2_214	Asian or Asian British - Vietnamese			M	71.8	"Hearing loss, Tinnitus, Facial numbness"		Surveillance	1998-05-01 00:00:00		
+VS_MC_RC2_215	White - British			M	71.7	Hearing loss		Surveillance	1991-03-13 00:00:00		
+VS_MC_RC2_215	White - British			M	73.7	Hearing loss		SRS	1993-04-05 00:00:00	1994-02-06 00:00:00	
+VS_MC_RC2_215	White - British			M	75	Hearing loss		Surveillance	1994-07-31 00:00:00		
+VS_MC_RC2_215	White - British			M	75.5	Hearing loss		Surveillance	1995-01-27 00:00:00		
+VS_MC_RC2_217	White - British	Surgery 1987		M	42.7	"Hearing loss, Balance disturbance"		SRS	1993-03-15 00:00:00	1993-09-03 00:00:00	
+VS_MC_RC2_217	White - British	Surgery 1987		M	43.5	Hearing loss		Surveillance	1994-02-01 00:00:00		
+VS_MC_RC2_217	White - British	Surgery 1987		M	44.1	Hearing loss		Surveillance	1994-08-06 00:00:00		
+VS_MC_RC2_219	White - Any other White background			F	46.4	Hearing loss		Surveillance	1992-12-04 00:00:00		
+VS_MC_RC2_219	White - Any other White background			F	47.5	Hearing loss		Surveillance	1994-01-23 00:00:00		
+VS_MC_RC2_219	White - Any other White background			F	50.7	Hearing loss		Surveillance	1997-03-24 00:00:00		
+VS_MC_RC2_220						Hearing loss		Surveillance	1993-05-29 00:00:00		
+VS_MC_RC2_221						"Tinnitus, Dizziness"		Surveillance	1993-06-13 00:00:00		
+VS_MC_RC2_221						"Tinnitus, Dizziness"		Surveillance	1996-06-15 00:00:00		
+VS_MC_RC2_222	NR			F	73.5	"Hearing loss, Balance disturbance"		Surveillance	1993-01-05 00:00:00		
+VS_MC_RC2_222	NR			F	75.5	"Hearing loss, Balance disturbance, Headache"		Surveillance	1995-01-27 00:00:00		
+VS_MC_RC2_223	NR			M	57.7	"Hearing loss, Tinnitus"		Surveillance	1993-03-14 00:00:00		
+VS_MC_RC2_223	NR			M	58.3	"Hearing loss, Tinnitus"		SRS	1993-11-20 00:00:00	1994-06-04 00:00:00	
+VS_MC_RC2_223	NR			M	59.2	"Hearing loss, Tinnitus, Balance disturbance"		Surveillance	1994-10-10 00:00:00		
+VS_MC_RC2_223	NR			M	62	"Hearing loss, Tinnitus"		Surveillance	1997-07-29 00:00:00		
+VS_MC_RC2_224	White - British	SRS 1995		M	53.7	Hearing loss		Surveillance	1993-03-22 00:00:00		
+VS_MC_RC2_224	White - British	SRS 1995		M	55.7	Hearing loss		Surveillance	1995-04-04 00:00:00		
+VS_MC_RC2_224	White - British	SRS 1995		M	57.8	Hearing loss		Surveillance	1997-04-20 00:00:00		
+VS_MC_RC2_225		SRS 1997				Hearing loss		Surveillance	1991-06-11 00:00:00		
+VS_MC_RC2_225		SRS 1997				Hearing loss		Surveillance	1993-05-09 00:00:00		
+VS_MC_RC2_225		SRS 1997				Hearing loss		Surveillance	1997-04-06 00:00:00		
+VS_MC_RC2_225		SRS 1997				Hearing loss		Surveillance	1999-07-04 00:00:00		
+VS_MC_RC2_226	White - British			F	60.6	"Balance disturbance, Hearing loss"		Surveillance	1993-02-19 00:00:00		
+VS_MC_RC2_226	White - British			F	61.6	Hearing loss		Surveillance	1994-02-18 00:00:00		
+VS_MC_RC2_226	White - British			F	62.7	Hearing loss		Surveillance	1995-04-15 00:00:00		
