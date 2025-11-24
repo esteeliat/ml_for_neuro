@@ -33,12 +33,16 @@ jobs:
           cache: pip # Implicitly uses requirements.txt for cache key
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Install MyST CLI
+        run: |
+          npm install -g mystmd
         
       - name: Setup Pages
         uses: actions/configure-pages@v3
         
       - name: Build HTML Assets
-        run: jupyter-book build --html
+        run: myst build --html --execute
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
