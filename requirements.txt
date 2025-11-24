@@ -3,6 +3,8 @@ altair
 matplotlib
 numpy
 vega_datasets
+seaborn
+scikit-learn
 
 # To interactively browser Jupyter content with MyST
 jupyterlab_myst
