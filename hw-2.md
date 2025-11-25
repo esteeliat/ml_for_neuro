@@ -223,11 +223,11 @@ linear_predictions = linear_model.predict(X_test)
 poly_model = make_pipeline(PolynomialFeatures(degree=5), LinearRegression())
 _ = poly_model.fit(X_train, y_train)
 poly_linear_predictions = poly_model.predict(X_test)
+```
 
 ### Evaluation Linear Regression
 ```{code-cell}
 from sklearn.metrics import mean_squared_error, r2_score
-from time import sleep
 
 def evaluate(predictions, title):
     mse = mean_squared_error(y_test, predictions)
@@ -251,6 +251,7 @@ evaluate(linear_predictions, "Linear Regression Predictions")
 print("Evaluate LR Predictions to Polynomial Features of X")
 evaluate(poly_linear_predictions, "Polynomial Regression Predictions (Degree 5)")
 ```
+
 ## c. KNN Regression
 ```{code-cell}
 knn1 = KNeighborsRegressor(n_neighbors=1)
@@ -295,3 +296,4 @@ axes[1].legend()
 
 plt.tight_layout()
 plt.show()
+```
