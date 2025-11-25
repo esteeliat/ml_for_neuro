@@ -191,6 +191,7 @@ show_cat_distr(symptom_df, 'symptom')
 
 
 ## Question 3:
+a.
 
 ### 80:20 split
 ```{code-cell}
@@ -198,19 +199,20 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.pipeline import make_pipeline
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.metrics import mean_squared_error
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
-df = pd.read_csv('./resources/neuron.csv')
+df = pd.read_csv(r"C:\Users\eden1\Desktop\IML_EX2\neuron.csv")
 X = df[['x']]  # Ensure X is 2D for sklearn
 y = df['y']
 
 X_train, X_test, y_train, y_test = train_test_split(
-    X,
-    y,
-    random_state=0,
-    test_size=0.2
-)
-```
-### Train Linear Regression
+    X, y, random_state=0, test_size=0.2)
+
+### b. Train Linear Regression
 ```{code-cell}
 # Linear regression to x
 linear_model = LinearRegression()
@@ -221,7 +223,6 @@ linear_predictions = linear_model.predict(X_test)
 poly_model = make_pipeline(PolynomialFeatures(degree=5), LinearRegression())
 _ = poly_model.fit(X_train, y_train)
 poly_linear_predictions = poly_model.predict(X_test)
-```
 
 ### Evaluation Linear Regression
 ```{code-cell}
@@ -243,11 +244,54 @@ def evaluate(predictions, title):
     _ = plt.legend()
     plt.title(title)
     plt.show()
-    print(f'Mean Squared Error: {mse:.2f}')
+    print("Mean Squared Error:", mse)
 
 print("Evaluate LR Predictions")
 evaluate(linear_predictions, "Linear Regression Predictions")
 print("Evaluate LR Predictions to Polynomial Features of X")
 evaluate(poly_linear_predictions, "Polynomial Regression Predictions (Degree 5)")
 
-```
+## c. KNN Regression
+```{code-cell}
+knn1 = KNeighborsRegressor(n_neighbors=1)
+knn10 = KNeighborsRegressor(n_neighbors=10)
+knn1.fit(X_train, y_train)
+knn10.fit(X_train, y_train)
+
+y_pred1 = knn1.predict(X_test)
+y_pred10 = knn10.predict(X_test)
+# Compute and print KNN MSEs
+mse1 = mean_squared_error(y_test, y_pred1)
+mse10 = mean_squared_error(y_test, y_pred10)
+print("Test MSE (K=1):", mse1)
+print("Test MSE (K=10):", mse10)
+
+
+# Smooth grid for plotting
+X_grid = np.linspace(X.min(), X.max(), 500).reshape(-1, 1)
+y_grid1 = knn1.predict(X_grid)
+y_grid10 = knn10.predict(X_grid)
+
+# Side-by-side plots
+fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+
+# Left plot - K=1
+axes[0].scatter(X_train, y_train, s=8, label="Train", alpha=0.6)
+axes[0].scatter(X_test, y_test, s=10, label="Test", alpha=0.8)
+axes[0].plot(X_grid, y_grid1, linewidth=2, label="K=1 Fit")
+axes[0].set_title("KNN Regression (K=1)")
+axes[0].set_xlabel("x")
+axes[0].set_ylabel("y")
+axes[0].legend()
+
+# Right plot - K=10
+axes[1].scatter(X_train, y_train, s=8, label="Train", alpha=0.6)
+axes[1].scatter(X_test, y_test, s=10, label="Test", alpha=0.8)
+axes[1].plot(X_grid, y_grid10, linewidth=2, label="K=10 Fit")
+axes[1].set_title("KNN Regression (K=10)")
+axes[1].set_xlabel("x")
+axes[1].set_ylabel("y")
+axes[1].legend()
+
+plt.tight_layout()
+plt.show()
