@@ -252,7 +252,7 @@ print("Evaluate LR Predictions to Polynomial Features of X")
 evaluate(poly_linear_predictions, "Polynomial Regression Predictions (Degree 5)")
 ```
 
-## c. KNN Regression
+### c. KNN Regression
 ```{code-cell}
 knn1 = KNeighborsRegressor(n_neighbors=1)
 knn10 = KNeighborsRegressor(n_neighbors=10)
@@ -297,3 +297,5 @@ axes[1].legend()
 plt.tight_layout()
 plt.show()
 ```
+### Best Model
+Two models tie for best performance, with minimal difference in their MSE (~0.0024) - KNN where K=10 and linear regression to polynomial features of x (degree 5). Linear regression without any polynomial feature performs the worst - we can see the true y values are not linear and so it makes sense that linear regression without polynomial features will not be optimal.
