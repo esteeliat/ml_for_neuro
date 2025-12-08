@@ -13,6 +13,7 @@ project:
     - file: intro.md
     - file: hw-1.md
     - file: hw-2.md
+    - file: hw-3.md
 site:
   template: book-theme
   # options:
