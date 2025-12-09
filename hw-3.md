@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
 N = 300  # number of training samples
 sigma = np.sqrt(0.05)  # noise standard deviation
 
@@ -113,3 +114,93 @@ Degree 2 test MSE: 0.055201
 Degree 3 test MSE: 0.054719  
 
 (e)  We can see by the results of (d) that degree 0 is too simplified, in degree 1 we are getting better but still the MSE are higher that 2,3. We can also see in the plot, that Naka–Rushton model has curve and degrees 0,1 can't capture it. In degree 2 we are getting even a lower MSE but still this model has some struggles to capture the curve. Therefore, degree 3 with the lowest MSE and we can see this is the first polynomial flexible enough to approximate the shape. Therefore, the Degree 3 model preformes the best.
+
+## Question 2:
+
+### part a: Split the data into training (80%) and test sets (20%)
+```{code-cell}
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, RocCurveDisplay, auc, confusion_matrix, ConfusionMatrixDisplay 
+from sklearn.linear_model import LogisticRegression
+
+df = pd.read_csv('resources/hw-3-q2-data.csv')
+
+INPUT_PARAMS = ['score_STAI_state_short', 'score_TAI_short', 'score_GAD', 'score_BFI_N']
+TARGET = 'score_AMAS_total'
+
+display(df[INPUT_PARAMS + [TARGET]].info(show_counts=True))
+
+X = df[INPUT_PARAMS]  
+y = df[TARGET]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, random_state=0, test_size=0.2)
+```
+
+### part b: Transform the score_AMAS_total to binary (high and low) 
+```{code-cell}
+amas_mean = y_train.mean()
+y_train = (y_train > amas_mean).astype(int)
+y_test = (y_test > amas_mean).astype(int)
+```
+
+### part c: Calculate the accuracy of a baseline model (which always predicts the majority class) 
+```{code-cell}
+majority_class = y_train.value_counts().idxmax()
+y_pred = [majority_class] * len(y_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Baseline accuracy is: {round(accuracy, 2)}")
+```
+
+### part d: Train a Logistic regression model:
+```{code-cell}
+model = LogisticRegression(random_state=0, penalty=None, solver="newton-cg")
+_ = model.fit(X_train, y_train)
+
+#i. Print the parameters of the fitted model.
+print(f"Intercept: {model.intercept_}")
+
+coefficients_table = pd.DataFrame({'Column': INPUT_PARAMS, 'Coefficients': model.coef_[0]})
+print("Coefficients:")
+display(coefficients_table)
+```
+
+```{code-cell}
+#ii. Calculate the Error Rate (Misclassification Rate) and Accuracy on the test set. Which threshold value have you used?
+predictions = model.predict(X_test)
+accuracy = accuracy_score(y_test, predictions)
+print(f"Error rate: {round(1 - accuracy, 2)}, Accuracy: {round(accuracy, 2)}")
+```
+
+```{code-cell}
+#iii. Plot the ROC curve and calculate the AUC.
+roc_curve = RocCurveDisplay.from_estimator(model, X_test, y_test)
+print(f"AUC: {round(roc_curve.roc_auc, 2)}")
+```
+
+```{code-cell}
+#iv. For theshold values of 0.3 and 0.7, print the confusion matrix and calculate the Sensitivity and Specificity. 
+probability = model.predict_proba(X_test)[:, 1]
+
+THRESHOLDS = [0.3, 0.7]
+
+for threshold in THRESHOLDS:
+    print(f"Results for threshold {threshold}")
+    predictions = (probability >= threshold).astype(int)
+    cm = confusion_matrix(y_test, predictions)
+    print("Confusion Matrix:")
+    print(cm)
+
+    false_negative = cm[1, 0]
+    true_negative = cm[0, 0]
+    false_positive = cm[0, 1]
+    true_positive = cm[1, 1]
+    
+    sensitivity = true_positive / (true_positive + false_negative)
+    specificity = true_negative / (true_negative + false_positive)
+    print(f"Sensitivity: {round(sensitivity, 2)}; Specificity: {round(specificity, 2)}\n")
+
+
+
+```
