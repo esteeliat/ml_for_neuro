@@ -179,3 +179,4 @@ test_mse = np.mean((y_test - y_test_pred) ** 2)
 print("Best lambda:", lam)
 print("Test MSE of best Ridge model:", test_mse)
 ```
+The best model was selected based on the lowest cross-validated mean squared error on the training set - known from b. . Five-fold cross-validation provides an unbiased estimate of generalization performance by repeatedly evaluating the model on unseen subsets of the data. The model and regularization parameter that minimized the cross-validated MSE were therefore chosen as the best model - known from c. .
