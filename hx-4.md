@@ -97,4 +97,85 @@ for deg in range(4):
 ```
 c.  
 ```{code-cell}
+import numpy as np
+import matplotlib.pyplot as plt
 
+def design_matrix(x, degree):
+    return np.vander(x, N=degree + 1, increasing=True)
+
+degree = 3
+K = 5
+#regularization effects are log-scale so lambdas are in defined by log
+lambdas = np.logspace(-4, 3, 20) 
+
+#reuse the exact same CV structure
+N_train = len(x_train)
+rng = np.random.default_rng(123)
+perm = rng.permutation(N_train)
+folds = np.array_split(perm, K)
+
+cv_mse_lambda = {}
+for lam in lambdas:
+    fold_mse = []
+# inner loop run 5-fold CV, compute validation MSE and average across folds
+    for k in range(K):
+        val_idx = folds[k]
+        train_idx = np.hstack([folds[i] for i in range(K) if i != k])
+
+        x_tr, y_tr = x_train[train_idx], y_train[train_idx]
+        x_val, y_val = x_train[val_idx], y_train[val_idx]
+
+        X_tr = design_matrix(x_tr, degree)
+        X_val = design_matrix(x_val, degree)
+
+        I = np.eye(X_tr.shape[1])
+        beta = np.linalg.inv(X_tr.T @ X_tr + lam * I) @ X_tr.T @ y_tr
+
+        y_val_pred = X_val @ beta
+        mse = np.mean((y_val - y_val_pred) ** 2)
+        fold_mse.append(mse)
+
+    cv_mse_lambda[lam] = np.mean(fold_mse)
+    print(f"lambda = {lam:.4e}, CV MSE = {cv_mse_lambda[lam]:.6f}")
+
+#Find best λ
+best_lambda = min(cv_mse_lambda, key=cv_mse_lambda.get)
+best_cv_mse = cv_mse_lambda[best_lambda]
+
+print("\nBest lambda:", best_lambda)
+print("Best CV MSE:", best_cv_mse)
+
+#Plot CV MSE vs λ
+plt.figure(figsize=(8, 5))
+plt.semilogx(lambdas, [cv_mse_lambda[l] for l in lambdas], marker='o')
+plt.xlabel("λ (regularization strength)")
+plt.ylabel("5-fold CV MSE")
+plt.title("Ridge Regression (Degree 3): CV MSE vs λ")
+plt.grid(True)
+plt.show()
+```
+Ridge regression was applied to the degree-3 polynomial model. The regularization parameter λ was tuned using 5-fold cross-validation on the training set. The cross-validated MSE was plotted as a function of λ, and the value minimizing the validation error was selected as the optimal regularization strength.  
+d.  
+```{code-cell}
+degree = 3
+lam = best_lambda
+
+# Build design matrices
+X_train_full = design_matrix(x_train, degree)
+X_test_full = design_matrix(x_test, degree)
+
+# Train Ridge regression on full training set
+I = np.eye(X_train_full.shape[1])
+beta_best = np.linalg.inv(
+    X_train_full.T @ X_train_full + lam * I
+) @ X_train_full.T @ y_train
+
+# Predict on test set
+y_test_pred = X_test_full @ beta_best
+
+# Compute test MSE
+test_mse = np.mean((y_test - y_test_pred) ** 2)
+
+print("Best lambda:", lam)
+print("Test MSE of best Ridge model:", test_mse)
+```
