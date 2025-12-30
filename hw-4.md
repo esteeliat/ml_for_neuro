@@ -20,7 +20,45 @@ b.  Evaluate the PPV when $\pi=0.01:
 $sn=0.86$, $sp=0.88$, $1-sp=1-0.88=0.12$
 $PPV(\pi,sn,sp)=\frac{sn*\pi}{sn*\pi+(1-sp)(1-\pi)}=\frac{0.0086}{0.0086+0.12*0.99}=\frac{0.0086}{0.1274}≈0.0675$  
 even though the test has high sensitivity (86%) and high specificity (88%), when the disease PPV is only 1%, most positive test results are false positives.
-## Question 2:  
+## Question 2: 
+
+```{code-cell}
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, RocCurveDisplay, auc, confusion_matrix, ConfusionMatrixDisplay 
+from sklearn.linear_model import LogisticRegression
+
+df = pd.read_csv('resources/hw-3-q2-data.csv')
+
+INPUT_PARAMS = ['score_STAI_state_short', 'score_TAI_short', 'score_GAD', 'score_BFI_N']
+TARGET = 'score_AMAS_total'
+
+X = df[INPUT_PARAMS]  
+y = df[TARGET]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, random_state=0, test_size=0.2)
+
+amas_mean = y_train.mean()
+y_train = (y_train > amas_mean).astype(int)
+y_test = (y_test > amas_mean).astype(int)
+
+model = LogisticRegression(random_state=0, penalty=None, solver="newton-cg")
+_ = model.fit(X_train, y_train)
+
+coefficients = model.coef_[0]
+odds_ratios = np.exp(coefficients)
+odds_ratios = pd.DataFrame({
+    'feature': X.columns,
+    'odds_ratio': np.exp(coefficients)
+})
+odds_ratios['importance'] = odds_ratios['odds_ratio'].map(lambda x: abs(1-x))
+display("Feature Importance by Odds Ratio:")
+display(odds_ratios.sort_values(by='importance', ascending=False))
+```
+Explanation: When using odds ratio, feature importance is determined by how far the odds ratio is from 1. The further from 1, the stronger effect a change in that feature will have on the outcome. 
+
 ## Question 3:  
 a.  
 ```{code-cell}
