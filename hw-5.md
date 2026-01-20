@@ -85,4 +85,40 @@ for feat, val in gb_top_features:
     print(f"{feat}: {val:.4f}")
 ```
 c.  
+we choose the gradient boosting model
 ```{code-cell}
+import shap
+# using a small background set for SHAP
+background = X_train[:100]
+explainer = shap.Explainer(best_gb, background)
+
+# choosing the first test sample as record
+idx = 0
+X_instance = X_test[idx]
+shap_values = explainer(X_instance)
+
+# force plot
+shap.initjs()
+
+shap.force_plot(explainer.expected_value, shap_values.values, X_instance.toarray(), feature_names=feature_names)
+```
+d.  
+```{code-cell}
+import shap
+
+# initialize JS for plots 
+shap.initjs()
+
+# create SHAP explainer for the chosen model (Gradient Boosting)
+explainer = shap.Explainer(best_gb, X_train[:100])
+
+# compute SHAP values for multiple test samples
+X_sample = X_test[:100]
+shap_values = explainer(X_sample)
+
+# Global feature importance (bar plot)
+shap.summary_plot( shap_values.values, X_sample.toarray(), feature_names=feature_names, plot_type="bar")
+
+# detailed beeswarm plot
+shap.summary_plot(shap_values.values, X_sample.toarray(), feature_names=feature_names)
+```
