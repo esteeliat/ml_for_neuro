@@ -85,8 +85,9 @@ print("\nTop Gradient Boosting features:")
 for i in gb_indices:
     print(f"{feature_names[i]}: {gb_importances[i]:.4f}")
 ```
+based on the Cross Validation results, the Gradient Boosting classifier achieved a higher test AUC (0.798) compared to the Random Forest classifier (0.772), indicating better discriminative performance and generalization.
 c.  
-we choose the gradient boosting model
+We choose the gradient boosting model.  
 ```{code-cell}
 import shap
 shap.initjs()
@@ -108,6 +109,7 @@ shap.force_plot(
     X_instance,
     feature_names=feature_names)
 ```
+Based on the results of a., the Gradient Boosting classifier was selected as the model.
 d.  
 ```{code-cell}
 import shap
@@ -128,3 +130,4 @@ shap.summary_plot(
     X_test_dense_small,
     feature_names=feature_names)
 ```
+the The SHAP bar plot shows that words such as camera, moment, share, park, smile, and laugh have the highest mean absolute SHAP values, therefore they are the most important features across the dataset. The SHAP beeswarm plot further reveals the direction of each feature’s influence. High TF-IDF values (red points) for features like camera, moment, share, smile, and laugh are predominantly associated with positive SHAP values, meaning they increase the predicted probability that a reel is successful. Overall, this confirm that the model relies on semantically meaningful and intuitive cues.
