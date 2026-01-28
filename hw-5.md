@@ -202,6 +202,7 @@ plt.title('Scatter Plot of PCA Loadings (PC1 vs PC2)')
 plt.grid(True)
 plt.show()
 ```
+Based on the graph - we can see that the stride_length variables (for both slow, fast and preffered) have the strongest effect on both PC1 and PC2, whereas the stride_time variables have a minimal effect on PC1, but strong effect on PC2. 
 
 (iii) Plot the explained variance ratio plot.
 ```{code-cell}
