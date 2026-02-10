@@ -5,4 +5,287 @@ kernelspec:
   name: python3
   display_name: 'Python 3'
 ---
+```{code-cell}
+import pandas as pd
+import matplotlib.pyplot as plt
 
+# 1. Loading the data set and asking basic questions on the dataset
+# ToDo: change the path before submitting
+df = pd.read_json(r"C:\Users\eden1\Desktop\IML_Neoroscience_Project\emoset_challenge_1000_augmented.json")
+
+# asking questions in order to understand the dataset
+print("Dataset size =", df.shape)
+#pd.set_option('display.max_columns', None)
+print("Dataset head = ", df.head()) # first 5 rows of the dataset with all columns
+print("Dataset columns = ", df.columns)
+print("Dataset types = ", df.dtypes)
+print("Missing values per column:", df.isnull().sum()) # missing values check
+print("Duplicate image names:", df['image_name'].duplicated().sum()) # checking image names looking for bias
+print("Embedding type:", type(df.loc[0, 'embedding'])) # checking embeddings
+print("Embedding length summary:", df['embedding'].apply(len).describe()) # Check embedding length consistency
+
+```
+
+# Conclusions:
+in the dataset there is 1000 images samples and 7 main columns. columns including: image identifiers, textual descriptions, viewer feeling descriptions, metadata annotations, and multiple embedding representations. the emotion label and another metadata are stored within a nested annotation dictionary. all embedding vectors have 512 dimensions implying there is consistency. No duplicating images where found - implying no bias in sampling.  
+
+# 2. Asking the important questions regarding the dataset  
+```{code-cell}
+# emotional label is inside a dictionary 'annotations', extracting it into its own columns  
+df['emotion'] = df['annotations'].apply(lambda x: x['emotion'])
+print("Emotions column head = ", df[['image_name', 'emotion']].head())
+print("Emotion classes =", ", ".join(df['emotion'].unique()))
+print("Number of emotion classes =", df['emotion'].nunique())
+# counting samples per emotion
+emotion_counts = df['emotion'].value_counts()
+print(emotion_counts)
+# Plotting class distribution
+emotion_counts.plot(kind='bar')
+plt.title("Emotion class distribution")
+plt.xlabel("Emotion")
+plt.ylabel("Number of samples")
+plt.show()
+```
+
+# Conclusions:
+# the target variable in this project is emotion (extracted from 'annotation'). We found 8 emotions contained in the
+# dataset: anger, amusement, awe, contentment, disgust, excitement, fear, and sadness. each emotion has exactly 125
+# samples to represent the class that gives us a perfectly balanced dataset as we can see in the plot.  
+
+
+# 3. Preparing the metadata
+```{code-cell}
+# unpacking the annotations dictionary and merging back into the main data frame
+annotations_df = df['annotations'].apply(pd.Series)
+pd.set_option('display.max_columns', None)
+print(annotations_df.head()) # now we can see which column is numerical and which is categorial
+df = pd.concat([df, annotations_df], axis=1) # sticking the new column we got side by side in the original table
+multilabel_metadata = ['object']
+identifier_columns = ['image_id']
+numeric_metadata = ['brightness', 'colorfulness']
+categorical_metadata = ['facial_expression', 'human_action', 'scene']
+print("Distribution of numeric metadata = ")
+print(df[numeric_metadata].describe())
+```
+
+# 4.numeric and categorical metadata  
+```{code-cell}
+# 4.1 Distribution of numeric
+df[numeric_metadata].hist(bins=30, figsize=(8, 4))
+plt.suptitle("Distribution of numeric metadata features")
+plt.show()
+# checking if different emotions tend to have different brightness or colorfulness
+df = df.loc[:, ~df.columns.duplicated()] # dropping the first emotions column
+for feature in numeric_metadata:
+    df.boxplot(column=feature, by='emotion')
+    plt.title(f"{feature} by emotion")
+    plt.suptitle("")  # removes automatic title
+    plt.xlabel("Emotion")
+    plt.ylabel(feature)
+    plt.xticks(rotation=45)
+    plt.show()
+
+top_k = 10  # number of categories to keep
+
+# 4.2 Distribution of categorical
+for feature in categorical_metadata:
+    print(f"\n--- {feature.upper()} DISTRIBUTION ---")
+    # count occurrences (including NaNs)
+    counts = df[feature].value_counts(dropna=False)
+    print(counts)
+
+    # If feature has many categories → limit to top-K
+    if counts.dropna().shape[0] > top_k:
+        top_categories = counts.dropna().head(top_k).index
+        filtered_df = df[df[feature].isin(top_categories)]
+    else:
+        filtered_df = df
+    by_emotion = pd.crosstab(filtered_df['emotion'], filtered_df[feature])
+    print(by_emotion)
+
+    # plotting
+    by_emotion.plot(kind='bar', stacked=True, figsize=(10, 5))
+    plt.title(f"{feature.replace('_', ' ').title()} Distribution by Emotion")
+    plt.xlabel("Emotion")
+    plt.ylabel("Count")
+    plt.xticks(rotation=45)
+    plt.legend(
+        title=feature.replace('_', ' ').title(),
+        bbox_to_anchor=(1.05, 1)
+    )
+    plt.tight_layout()
+    plt.show()
+```
+
+#### new part
+# 5. Text EDA
+```{code-cell}
+text_columns = ['description', 'viewer_feelings']
+
+for col in text_columns: #Are there NaNs and Is one column much sparser than the other?
+    print(f"\n--- {col.upper()} ---")
+    print(df[col].isna().value_counts())
+
+for col in text_columns: #Text length distributions
+    df[f'{col}_length'] = df[col].fillna("").apply(lambda x: len(x.split()))
+
+#Plot histograms
+for col in text_columns:
+    plt.figure(figsize=(8, 4))
+    df[f'{col}_length'].hist(bins=30)
+    plt.title(f"Word Count Distribution: {col}")
+    plt.xlabel("Number of words")
+    plt.ylabel("Frequency")
+    plt.show()
+
+#Compare statistics numerically
+df[[f'{col}_length' for col in text_columns]].describe()
+#Vocabulary size
+import re
+def get_vocab(text_series):
+    words = []
+    for text in text_series.dropna():
+        text = text.lower()
+        text = re.sub(r'[^a-z\s]', '', text)
+        words.extend(text.split())
+    return set(words)
+
+for col in text_columns:
+    vocab = get_vocab(df[col])
+    print(f"{col} vocabulary size: {len(vocab)}")
+#Most frequent words
+from collections import Counter
+def top_words(text_series, top_k=20):
+    words = []
+    for text in text_series.dropna():
+        text = text.lower()
+        text = re.sub(r'[^a-z\s]', '', text)
+        words.extend(text.split())
+    return Counter(words).most_common(top_k)
+for col in text_columns:
+    print(f"\nTop words in {col}:")
+    for word, count in top_words(df[col]):
+        print(f"{word}: {count}")
+```
+
+# 6. If we squish these high-dimensional embeddings into 2D, will images with the same emotion ends up closer  
+```{code-cell}
+#Convert embeddings into a matrix
+import numpy as np
+X_image = np.vstack(df['embedding'].values)
+y = df['emotion']
+#Dimensionality reduction (PCA first)
+from sklearn.decomposition import PCA
+pca = PCA(n_components=2)
+X_pca = pca.fit_transform(X_image)
+
+#Plot and color by emotion
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(8, 6))
+
+for emotion in y.unique():
+    idx = y == emotion
+    plt.scatter(
+        X_pca[idx, 0],
+        X_pca[idx, 1],
+        label=emotion,
+        alpha=0.6
+    )
+plt.title("PCA of Image Embeddings (colored by emotion)")
+plt.xlabel("PC1")
+plt.ylabel("PC2")
+plt.legend(bbox_to_anchor=(1.05, 1))
+plt.tight_layout()
+plt.show()
+
+print("Explained variance ratio:", pca.explained_variance_ratio_)
+print("Total explained variance:", pca.explained_variance_ratio_.sum())
+
+X_text = np.vstack(df['viewer_feelings_embedding'].values)
+```
+
+## TF - IDF 
+```{code-cell}
+#TF–IDF Vectorization
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# Target
+y = df['emotion']
+# Text source
+X_text = df['viewer_feelings']
+# TF–IDF vectorizer
+tfidf = TfidfVectorizer(max_features=5000, stop_words='english', ngram_range=(1, 1))
+X_tfidf = tfidf.fit_transform(X_text)
+print("TF–IDF shape:", X_tfidf.shape)
+
+#sanity-check - Vocabulary size
+print("Vocabulary size: ", len(tfidf.vocabulary_))
+
+#Top TF–IDF words per emotion
+feature_names = np.array(tfidf.get_feature_names_out())
+
+for emotion in y.unique():
+    idx = (y == emotion).values
+    mean_tfidf = X_tfidf[idx].mean(axis=0)
+    top_indices = np.argsort(mean_tfidf.A1)[-10:]
+
+    print(f"\nTop words for emotion: {emotion}")
+    print(feature_names[top_indices])
+
+#TF–IDF PCA visualization
+from sklearn.decomposition import PCA
+
+X_tfidf_dense = X_tfidf.toarray()
+pca = PCA(n_components=2)
+X_tfidf_pca = pca.fit_transform(X_tfidf_dense)
+
+plt.figure(figsize=(8, 6))
+for emotion in y.unique():
+    idx = y == emotion
+    plt.scatter(
+        X_tfidf_pca[idx, 0],
+        X_tfidf_pca[idx, 1],
+        label=emotion,
+        alpha=0.6
+    )
+
+plt.title("PCA of TF–IDF Viewer Feelings (colored by emotion)")
+plt.xlabel("PC1")
+plt.ylabel("PC2")
+plt.legend(bbox_to_anchor=(1.05, 1))
+plt.tight_layout()
+plt.show()
+
+#TF–IDF on description
+# TF–IDF on descriptions
+X_desc = df['description']
+
+tfidf_desc = TfidfVectorizer(max_features=5000, stop_words='english', ngram_range=(1, 1))
+X_desc_tfidf = tfidf_desc.fit_transform(X_desc)
+print("Description TF–IDF shape:", X_desc_tfidf.shape)
+print("Description vocabulary size:", len(tfidf_desc.vocabulary_))
+
+#Prepare feature names
+desc_feature_names = np.array(tfidf_desc.get_feature_names_out())
+for emotion in y.unique():
+    idx = (y == emotion).values
+
+    mean_tfidf = X_desc_tfidf[idx].mean(axis=0)
+    top_indices = np.argsort(mean_tfidf.A1)[-10:]
+
+    print(f"\nTop description words for emotion: {emotion}")
+    print(desc_feature_names[top_indices])
+
+#Vocabulary overlap
+desc_vocab = set(tfidf_desc.vocabulary_.keys())
+feel_vocab = set(tfidf.vocabulary_.keys())
+
+overlap = desc_vocab.intersection(feel_vocab)
+
+print("Description vocab size:", len(desc_vocab))
+print("Viewer feelings vocab size:", len(feel_vocab))
+print("Shared vocabulary size:", len(overlap))
+print("Overlap ratio (desc):", len(overlap) / len(desc_vocab))
+print("Overlap ratio (feelings):", len(overlap) / len(feel_vocab))
+```
