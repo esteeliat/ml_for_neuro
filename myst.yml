@@ -16,6 +16,7 @@ project:
     - file: hw-3.md
     - file: hw-4.md
     - file: hw-5.md
+    - file: Final-Project.md
 site:
   template: book-theme
   # options:
