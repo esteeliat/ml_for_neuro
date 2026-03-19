@@ -216,86 +216,151 @@ X_text = np.vstack(df['viewer_feelings_embedding'].values)
 # 7. TF - IDF 
 ```{code-cell}
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.decomposition import PCA
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+import numpy as np
+import matplotlib.pyplot as plt
 
-def analyze_tfidf(vectorizer, X, y):
-    display(f"TF–IDF shape: {X.shape}")
+# SPLIT DATA
+y = df['emotion']
+train_df, test_df = train_test_split(
+    df,
+    test_size=0.2,
+    random_state=42,
+    stratify=y)
 
-    #sanity-check - Vocabulary size
-    display(f"Vocabulary size: {len(vectorizer.vocabulary_)}")
+y_train = train_df['emotion']
+y_test = test_df['emotion']
 
-    #Top TF–IDF words per emotion
+# TF-IDF PARAMETERS
+vectorizer_params = {
+    "sublinear_tf": True,
+    'ngram_range': (1, 2),
+    "stop_words": "english"
+}
+
+# ANALYSIS FUNCTION
+def analyze_tfidf(vectorizer, X, y, title=""):
+    print(f"\n--- {title} ---")
+    print(f"TF–IDF shape: {X.shape}")
+    print(f"Vocabulary size: {len(vectorizer.vocabulary_)}")
     feature_names = np.array(vectorizer.get_feature_names_out())
-
+    # Top words per emotion
     for emotion in y.unique():
         idx = (y == emotion).values
         mean_tfidf = X[idx].mean(axis=0)
         top_indices = np.argsort(mean_tfidf.A1)[-10:]
+        print(f"\nTop words for emotion: {emotion}")
+        print(feature_names[top_indices])
 
-        display(f"Top words for emotion: {emotion}")
-        display(feature_names[top_indices])
-
-    # PCA
-    X_tfidf_dense = X.toarray()
-    pca = PCA(n_components=0.9)
-    X_tfidf_pca = pca.fit_transform(X_tfidf_dense)
-
+    # PCA visualization
+    X_dense = X.toarray()
+    pca = PCA(n_components=2)
+    X_pca = pca.fit_transform(X_dense)
     plt.figure(figsize=(8, 6))
     for emotion in y.unique():
         idx = y == emotion
         plt.scatter(
-            X_tfidf_pca[idx, 0],
-            X_tfidf_pca[idx, 1],
+            X_pca[idx, 0],
+            X_pca[idx, 1],
             label=emotion,
             alpha=0.6
         )
-
-    plt.title("PCA of TF–IDF (colored by emotion)")
+    plt.title(f"PCA of TF-IDF ({title})")
     plt.xlabel("PC1")
     plt.ylabel("PC2")
     plt.legend(bbox_to_anchor=(1.05, 1))
     plt.tight_layout()
     plt.show()
 
-# Target
-y = df['emotion']
 
-# TF-IDF on Viewer Feelings
-viewer_feelings = df['viewer_feelings']
+# FEATURE EFFECT PLOT
+def plot_feature_effects(vectorizer, X_train, y_train, clf, top_n=15, title=""):
+    feature_names = np.array(vectorizer.get_feature_names_out())
 
-# TF–IDF vectorizer
-vectorizer_params = {
-    "sublinear_tf": True,
-    #"max_df": 0.5,
-    #"min_df": 5,
-    'ngram_range': (1, 2),
-    "stop_words": "english"
-}
-display("TFIDF ANALYSIS FOR VIEWER FEELINGS")
+    # Mean TF-IDF across training data
+    mean_tfidf = np.asarray(X_train.mean(axis=0)).ravel()
+
+    # Compute effects
+    effects = clf.coef_ * mean_tfidf
+
+    # Select most important features
+    top_indices = np.argsort(np.abs(effects).max(axis=0))[-top_n:]
+    selected_features = feature_names[top_indices]
+    plt.figure(figsize=(10, 8))
+    for i, class_label in enumerate(clf.classes_):
+        plt.barh(
+            selected_features,
+            effects[i, top_indices],
+            alpha=0.6,
+            label=class_label)
+    plt.xlabel("Average Feature Effect")
+    plt.title(f"Feature Effects ({title})")
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+# 7.1 VIEWER FEELINGS
+print("\n==============================")
+print("TF-IDF: VIEWER FEELINGS")
+print("==============================")
 
 feelings_vectorizer = TfidfVectorizer(**vectorizer_params)
-viewer_feelings_tfidf = feelings_vectorizer.fit_transform(viewer_feelings)
-analyze_tfidf(feelings_vectorizer, viewer_feelings_tfidf, y)
 
+X_train_feelings = feelings_vectorizer.fit_transform(train_df['viewer_feelings'])
+X_test_feelings = feelings_vectorizer.transform(test_df['viewer_feelings'])
 
-# TF–IDF on descriptions
-display("TFIDF ANALYSIS FOR DESCRIPTION")
-description = df['description']
+# Analysis
+analyze_tfidf(feelings_vectorizer, X_train_feelings, y_train, "Viewer Feelings")
+
+# Train model for interpretation
+clf_feelings = LogisticRegression(max_iter=1000)
+clf_feelings.fit(X_train_feelings, y_train)
+
+# Feature effects plot 🔥
+plot_feature_effects(
+    feelings_vectorizer,
+    X_train_feelings,
+    y_train,
+    clf_feelings,
+    title="Viewer Feelings")
+
+# 7.2 DESCRIPTION
+print("\n==============================")
+print("TF-IDF: DESCRIPTION")
+print("==============================")
 
 description_vectorizer = TfidfVectorizer(**vectorizer_params)
-description_tfidf = description_vectorizer.fit_transform(description)
-analyze_tfidf(description_vectorizer, description_tfidf, y)
 
-#Vocabulary overlap
+X_train_desc = description_vectorizer.fit_transform(train_df['description'])
+X_test_desc = description_vectorizer.transform(test_df['description'])
+
+# Analysis
+analyze_tfidf(description_vectorizer, X_train_desc, y_train, "Description")
+
+# Train model
+clf_desc = LogisticRegression(max_iter=1000)
+clf_desc.fit(X_train_desc, y_train)
+
+# Feature effects plot 🔥
+plot_feature_effects(
+    description_vectorizer,
+    X_train_desc,
+    y_train,
+    clf_desc,
+    title="Description")
+
+# 7.3 VOCABULARY OVERLAP
 desc_vocab = set(description_vectorizer.vocabulary_.keys())
 feel_vocab = set(feelings_vectorizer.vocabulary_.keys())
-
 overlap = desc_vocab.intersection(feel_vocab)
-
-display("Description vocab size:", len(desc_vocab))
-display("Viewer feelings vocab size:", len(feel_vocab))
-display("Shared vocabulary size:", len(overlap))
-display("Overlap ratio (desc):", len(overlap) / len(desc_vocab))
-display("Overlap ratio (feelings):", len(overlap) / len(feel_vocab))
+print("\n--- Vocabulary Overlap ---")
+print("Description vocab size:", len(desc_vocab))
+print("Viewer feelings vocab size:", len(feel_vocab))
+print("Shared vocabulary size:", len(overlap))
+print("Overlap ratio (desc):", len(overlap) / len(desc_vocab))
+print("Overlap ratio (feelings):", len(overlap) / len(feel_vocab))
 ```
 
 # 8: Train a model that predicts the emotions based on tabular dataset. 
