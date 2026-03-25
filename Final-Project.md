@@ -8,7 +8,9 @@ kernelspec:
 # 1. Loading the data set and asking basic questions on the dataset
 ```{code-cell}
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
+
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression, RidgeClassifier
@@ -16,8 +18,12 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import roc_auc_score, accuracy_score,classification_report, f1_score, ConfusionMatrixDisplay
 from scipy import sparse
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_selection import SelectKBest, chi2, mutual_info_classif
+import seaborn as sns
+from collections import Counter
+import re
 
-# ToDo: change the path before submitting
 df = pd.read_json(r"resources/emoset_challenge_1000_augmented.json")
 
 # unpacking the annotations dictionary and merging back into the main data frame
@@ -178,37 +184,38 @@ for col in text_columns:
 
 # 6. If we squish these high-dimensional embeddings into 2D, will images with the same emotion ends up closer  
 ```{code-cell}
+def display_pca_by_emotion(n_components, x, y, title):
+    pca = PCA(n_components=n_components)
+    X_pca = pca.fit_transform(x)
+
+    #Plot and color by emotion
+    plt.figure(figsize=(8, 6))
+
+    for emotion in y.unique():
+        idx = y == emotion
+        plt.scatter(
+            X_pca[idx, 0],
+            X_pca[idx, 1],
+            label=emotion,
+            alpha=0.6
+        )
+    plt.title(title)
+    plt.xlabel("PC1")
+    plt.ylabel("PC2")
+    plt.legend(bbox_to_anchor=(1.05, 1))
+    plt.tight_layout()
+    plt.show()
+
+    display("Explained variance ratio:", pca.explained_variance_ratio_)
+    display("Total explained variance:", pca.explained_variance_ratio_.sum())
+```
+
+```{code-cell}
 #Convert embeddings into a matrix
-import numpy as np
 X_image = np.vstack(df['embedding'].values)
 y = df['emotion']
-#Dimensionality reduction (PCA first)
-from sklearn.decomposition import PCA
-pca = PCA(n_components=2)
-X_pca = pca.fit_transform(X_image)
 
-#Plot and color by emotion
-import matplotlib.pyplot as plt
-
-plt.figure(figsize=(8, 6))
-
-for emotion in y.unique():
-    idx = y == emotion
-    plt.scatter(
-        X_pca[idx, 0],
-        X_pca[idx, 1],
-        label=emotion,
-        alpha=0.6
-    )
-plt.title("PCA of Image Embeddings (colored by emotion)")
-plt.xlabel("PC1")
-plt.ylabel("PC2")
-plt.legend(bbox_to_anchor=(1.05, 1))
-plt.tight_layout()
-plt.show()
-
-display("Explained variance ratio:", pca.explained_variance_ratio_)
-display("Total explained variance:", pca.explained_variance_ratio_.sum())
+display_pca_by_emotion(0.9, X_image, y, "PCA of Image Embeddings (colored by emotion)")
 
 X_text = np.vstack(df['viewer_feelings_embedding'].values)
 ```
