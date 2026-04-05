@@ -244,7 +244,8 @@ print(f"Objects appearing >= 5 times: {(all_objects.value_counts() >= 5).sum()}"
 
 object_emotion = (df[['emotion', 'object']]
     .explode('object')
-    .dropna(subset=['object']))
+    .dropna(subset=['object'])
+    .reset_index(drop=True))
 
 categorical_eda(object_emotion, 'object', top_k = 17)
 ```
